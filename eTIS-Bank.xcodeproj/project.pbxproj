@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		94051CC819994D020070A485 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94051CC719994D020070A485 /* Crashlytics.framework */; };
+		9430F4971999832D0058B043 /* PinPad Pad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9430F4961999832D0058B043 /* PinPad Pad.png */; };
 		94ACEF0A1997C793003B7244 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ACEF091997C793003B7244 /* Foundation.framework */; };
 		94ACEF0C1997C793003B7244 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ACEF0B1997C793003B7244 /* CoreGraphics.framework */; };
 		94ACEF0E1997C793003B7244 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ACEF0D1997C793003B7244 /* UIKit.framework */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		94051CC719994D020070A485 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		9430F4961999832D0058B043 /* PinPad Pad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PinPad Pad.png"; sourceTree = "<group>"; };
 		94ACEF061997C793003B7244 /* eTIS-Bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eTIS-Bank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94ACEF091997C793003B7244 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94ACEF0B1997C793003B7244 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -163,6 +165,7 @@
 		94ACEF101997C793003B7244 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9430F4961999832D0058B043 /* PinPad Pad.png */,
 				94FAB2891997CA740087263F /* Background + Rectangle 7 + Your Bank.png */,
 				94FAB28A1997CA740087263F /* Line.png */,
 				94FAB28B1997CA740087263F /* Login Button.png */,
@@ -287,6 +290,7 @@
 				94FAB28D1997CA740087263F /* Background + Rectangle 7 + Your Bank.png in Resources */,
 				94ACEF221997C793003B7244 /* Images.xcassets in Resources */,
 				94FAB2881997C8200087263F /* eTIS-Bank App Icon.png in Resources */,
+				9430F4971999832D0058B043 /* PinPad Pad.png in Resources */,
 				94FAB28E1997CA740087263F /* Line.png in Resources */,
 				94FAB2901997CA740087263F /* Open Account Button.png in Resources */,
 				94ACEF141997C793003B7244 /* InfoPlist.strings in Resources */,

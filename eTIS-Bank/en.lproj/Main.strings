@@ -1,0 +1,45 @@
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "0bm-rO-zZe"; */
+"0bm-rO-zZe.normalTitle" = "Button";
+
+/* Class = "IBUINavigationItem"; title = "Type Your PIN"; ObjectID = "2iK-GY-zVa"; */
+"2iK-GY-zVa.title" = "Type Your PIN";
+
+/* Class = "IBUIButton"; normalTitle = "4"; ObjectID = "3pa-Yk-Ukh"; */
+"3pa-Yk-Ukh.normalTitle" = "4";
+
+/* Class = "IBUILabel"; text = "Register new Account"; ObjectID = "4aO-17-nqx"; */
+"4aO-17-nqx.text" = "Register new Account";
+
+/* Class = "IBUIButton"; normalTitle = "5"; ObjectID = "6U9-q2-Ccl"; */
+"6U9-q2-Ccl.normalTitle" = "5";
+
+/* Class = "IBUIButton"; normalTitle = "7"; ObjectID = "9tR-Ii-FwU"; */
+"9tR-Ii-FwU.normalTitle" = "7";
+
+/* Class = "IBUILabel"; text = "Sign In"; ObjectID = "Cfx-c8-o8h"; */
+"Cfx-c8-o8h.text" = "Sign In";
+
+/* Class = "IBUIButton"; normalTitle = "1"; ObjectID = "Dyq-DA-5je"; */
+"Dyq-DA-5je.normalTitle" = "1";
+
+/* Class = "IBUIButton"; normalTitle = "6"; ObjectID = "OEg-2V-9xd"; */
+"OEg-2V-9xd.normalTitle" = "6";
+
+/* Class = "IBUIButton"; normalTitle = "3"; ObjectID = "V82-ha-e71"; */
+"V82-ha-e71.normalTitle" = "3";
+
+/* Class = "IBUIButton"; normalTitle = "2"; ObjectID = "aDy-Yw-2ZR"; */
+"aDy-Yw-2ZR.normalTitle" = "2";
+
+/* Class = "IBUIButton"; normalTitle = "9"; ObjectID = "ecK-8K-rJB"; */
+"ecK-8K-rJB.normalTitle" = "9";
+
+/* Class = "IBUIButton"; normalTitle = "0"; ObjectID = "lTU-Ih-4xA"; */
+"lTU-Ih-4xA.normalTitle" = "0";
+
+/* Class = "IBUIButton"; normalTitle = "8"; ObjectID = "pSM-pI-UFP"; */
+"pSM-pI-UFP.normalTitle" = "8";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "t2a-a4-xbY"; */
+"t2a-a4-xbY.normalTitle" = "Button";
