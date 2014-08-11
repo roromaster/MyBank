@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A299l" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background + Rectangle 7 + Your Bank.png" translatesAutoresizingMaskIntoConstraints="NO" id="ECZ-R5-FOg">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bm-rO-zZe">
+                                <rect key="frame" x="0.0" y="408" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Open Account Button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7Of-dg-P1E" kind="modal" id="1G0-GD-wo7"/>
+                                </connections>
+                            </button>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2a-a4-xbY">
+                                <rect key="frame" x="160" y="408" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Login Button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lza-GS-JdP">
+                                <rect key="frame" x="155" y="408" width="5" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-172" y="-718"/>
+        </scene>
+        <!--Open Account Presentation View Controller-->
+        <scene sceneID="vMZ-3o-Aw6">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n50-yx-cXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="OpenAccountPresenationContent" modalTransitionStyle="flipHorizontal" id="oTb-Ms-gKo" customClass="OpenAccountPresentationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r1n-JN-cTj"/>
+                        <viewControllerLayoutGuide type="bottom" id="mIe-te-2rx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PwD-gE-rm4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78P-o0-MRe">
+                                <rect key="frame" x="0.0" y="118" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x4W-v3-ETx"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="OpenAccountPresentationImageView" destination="78P-o0-MRe" id="ca3-XC-NaI"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="849" y="222"/>
+        </scene>
+        <!--Open Account Root View Controller-->
+        <scene sceneID="MhW-9x-fIg">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="7Of-dg-P1E" customClass="OpenAccountRootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WTh-ST-KMR"/>
+                        <viewControllerLayoutGuide type="bottom" id="kA1-xQ-rJG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V9i-Z3-fX1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background + Rectangle 7 + Your Bank.png" translatesAutoresizingMaskIntoConstraints="NO" id="TGd-8J-RlK">
+                                <rect key="frame" x="0.0" y="22" width="320" height="548"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <pageControl appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qJ4-Ai-ibZ">
+                                <rect key="frame" x="261" y="525" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TGd-8J-RlK" firstAttribute="top" secondItem="WTh-ST-KMR" secondAttribute="bottom" constant="2" id="Eiv-BU-2Rj"/>
+                            <constraint firstItem="TGd-8J-RlK" firstAttribute="leading" secondItem="V9i-Z3-fX1" secondAttribute="leading" id="c5y-Mg-H2G"/>
+                            <constraint firstAttribute="bottom" secondItem="TGd-8J-RlK" secondAttribute="bottom" constant="-2" id="izR-PY-TpC"/>
+                            <constraint firstAttribute="trailing" secondItem="TGd-8J-RlK" secondAttribute="trailing" id="wTk-zD-UMR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="T3x-z4-JzT"/>
+                    <connections>
+                        <outlet property="MypageControl" destination="qJ4-Ai-ibZ" id="WG9-mU-6o2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4s-ut-1th" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367" y="222"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background + Rectangle 7 + Your Bank.png" width="640" height="1107"/>
+        <image name="Line.png" width="4" height="320"/>
+        <image name="Login Button.png" width="320" height="320"/>
+        <image name="Open Account Button.png" width="320" height="320"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
