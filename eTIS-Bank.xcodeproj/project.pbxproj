@@ -140,6 +140,7 @@
 		94ACEF0F1997C793003B7244 /* eTIS-Bank */ = {
 			isa = PBXGroup;
 			children = (
+				94EF0A92199964BA00FA9DDB /* iPad */,
 				94ACEF181997C793003B7244 /* AppDelegate.h */,
 				94ACEF191997C793003B7244 /* AppDelegate.m */,
 				94FAB29F199801920087263F /* OpenAccountRootViewController.h */,
@@ -193,6 +194,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		94EF0A92199964BA00FA9DDB /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,6 +249,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Rodolphe Hugel";
 				TargetAttributes = {
+					94ACEF051997C793003B7244 = {
+						DevelopmentTeam = 475ZG6KR4B;
+					};
 					94ACEF261997C793003B7244 = {
 						TestTargetID = 94ACEF051997C793003B7244;
 					};
@@ -435,6 +446,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -445,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -452,6 +465,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "eTIS-Bank/eTIS-Bank-Prefix.pch";
 				INFOPLIST_FILE = "eTIS-Bank/eTIS-Bank-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -463,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -470,6 +485,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "eTIS-Bank/eTIS-Bank-Prefix.pch";
 				INFOPLIST_FILE = "eTIS-Bank/eTIS-Bank-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

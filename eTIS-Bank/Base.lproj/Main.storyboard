@@ -41,6 +41,20 @@
                                 <rect key="frame" x="155" y="408" width="5" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register new Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="127" translatesAutoresizingMaskIntoConstraints="NO" id="4aO-17-nqx">
+                                <rect key="frame" x="20" y="514" width="127" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="127" translatesAutoresizingMaskIntoConstraints="NO" id="Cfx-c8-o8h">
+                                <rect key="frame" x="177" y="514" width="127" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -52,7 +66,6 @@
         <!--Open Account Presentation View Controller-->
         <scene sceneID="vMZ-3o-Aw6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n50-yx-cXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="OpenAccountPresenationContent" modalTransitionStyle="flipHorizontal" id="oTb-Ms-gKo" customClass="OpenAccountPresentationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r1n-JN-cTj"/>
@@ -75,6 +88,7 @@
                         <outlet property="OpenAccountPresentationImageView" destination="78P-o0-MRe" id="ca3-XC-NaI"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n50-yx-cXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="849" y="222"/>
         </scene>
@@ -119,7 +133,7 @@
     </scenes>
     <resources>
         <image name="Background + Rectangle 7 + Your Bank.png" width="640" height="1107"/>
-        <image name="Line.png" width="4" height="320"/>
+        <image name="Line.png" width="10" height="321"/>
         <image name="Login Button.png" width="320" height="320"/>
         <image name="Open Account Button.png" width="320" height="320"/>
     </resources>
