@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) NSArray *pageContent;
 @property (strong, nonatomic) UIPageViewController *pageController;
+
 @property (weak, nonatomic) IBOutlet UIPageControl *MypageControl;
 
 @end

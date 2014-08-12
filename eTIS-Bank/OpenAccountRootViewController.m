@@ -28,11 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self createContentPages];
-    
-  //  UIPageControl *pageControl = [UIPageControl appearance];
-    _MypageControl.pageIndicatorTintColor = [UIColor whiteColor];
-    _MypageControl.currentPageIndicatorTintColor = [UIColor blueColor];
-    _MypageControl.backgroundColor = [UIColor clearColor];
+
     
     NSDictionary *options = [NSDictionary dictionaryWithObject:
                              [NSNumber numberWithInteger:UIPageViewControllerSpineLocationMin]
@@ -44,8 +40,8 @@
                        options: options];
     
     _pageController.dataSource = self;
-    [[_pageController view] setFrame:[[self view] bounds]];
-    
+//    [[_pageController view] setFrame:[[self view] bounds]];
+     [[_pageController view] setFrame:CGRectMake(0, 120, 320, 320)];
     OpenAccountPresentationViewController *initialViewController =
     [self viewControllerAtIndex:0];
     NSArray *viewControllers =
@@ -55,9 +51,15 @@
                               direction:UIPageViewControllerNavigationDirectionForward
                                animated:NO
                              completion:nil];
-    
     [self addChildViewController:_pageController];
     [[self view] addSubview:[_pageController view]];
+    
+    
+    self.MypageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    self.MypageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
+    self.MypageControl.backgroundColor =[UIColor clearColor];
+
+    [self.view bringSubviewToFront:self.MypageControl];
 
 }
 
