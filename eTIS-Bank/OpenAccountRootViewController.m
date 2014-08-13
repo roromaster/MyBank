@@ -35,21 +35,23 @@
                                                         forKey: UIPageViewControllerOptionSpineLocationKey];
     
     _pageController = [[UIPageViewController alloc]
-                       initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
+                       initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl
                        navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
                        options: options];
     
     _pageController.dataSource = self;
-//    [[_pageController view] setFrame:[[self view] bounds]];
-     [[_pageController view] setFrame:CGRectMake(0, 120, 320, 320)];
+    
+    [[_pageController view] setFrame:CGRectMake(0, 120, 320, 320)];
+    
     OpenAccountPresentationViewController *initialViewController =
     [self viewControllerAtIndex:0];
+    
     NSArray *viewControllers =
     [NSArray arrayWithObject:initialViewController];
     
     [_pageController setViewControllers:viewControllers
                               direction:UIPageViewControllerNavigationDirectionForward
-                               animated:NO
+                               animated:YES
                              completion:nil];
     [self addChildViewController:_pageController];
     [[self view] addSubview:[_pageController view]];
@@ -58,6 +60,7 @@
     self.MypageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
     self.MypageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
     self.MypageControl.backgroundColor =[UIColor clearColor];
+    self.MypageControl.numberOfPages = [self.pageContent count];
 
     [self.view bringSubviewToFront:self.MypageControl];
 
@@ -81,10 +84,11 @@
     _pageContent = [[NSArray alloc] initWithArray:pageStrings];
 }
 
+
 - (OpenAccountPresentationViewController *)viewControllerAtIndex:(NSUInteger)index
 {
     // Return the data view controller for the given index.
-    if (([self.pageContent count] == 0) ||
+        if (([self.pageContent count] == 0) ||
         (index >= [self.pageContent count])) {
         return nil;
     }
@@ -104,6 +108,8 @@
      instantiateViewControllerWithIdentifier:@"OpenAccountPresenationContent"];
     
     dataViewController.dataObject = _pageContent[index];
+    [self.MypageControl setCurrentPage: index];
+
     return dataViewController;
 }
 
@@ -122,8 +128,9 @@
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
     }
-    
+        NSLog(@"After - Index:%i",index);
     index--;
+
     return [self viewControllerAtIndex:index];
 }
 
@@ -135,27 +142,36 @@
     if (index == NSNotFound) {
         return nil;
     }
-    
+    NSLog(@"After - Index:%i",index);
     index++;
+
+    
     if (index == [self.pageContent count]) {
         return nil;
     }
+    
     return [self viewControllerAtIndex:index];
 }
 
-- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
+
+-(void) viewDidAppear:(BOOL)animated
 {
-    return [_pageContent count];
-  
+    
+
     
 }
-
-- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
-{
-    return  0;
-}
-
-
+//- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
+//{
+//    //return [_pageContent count];
+//    return 0;
+//    
+//}
+//
+//- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
+//{
+//    return  0;
+//}
+//
 
 /*
 #pragma mark - Navigation

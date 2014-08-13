@@ -23,6 +23,13 @@
 		94ACEF2B1997C793003B7244 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ACEF0D1997C793003B7244 /* UIKit.framework */; };
 		94ACEF331997C793003B7244 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94ACEF311997C793003B7244 /* InfoPlist.strings */; };
 		94ACEF351997C793003B7244 /* eTIS_BankTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94ACEF341997C793003B7244 /* eTIS_BankTests.m */; };
+		94C958B7199AD8BE007D6238 /* Backspace Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C958B4199AD8BE007D6238 /* Backspace Icon.png */; };
+		94C958B8199AD8BE007D6238 /* Login Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C958B5199AD8BE007D6238 /* Login Background.png */; };
+		94C958B9199AD8BE007D6238 /* Pin Pad Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C958B6199AD8BE007D6238 /* Pin Pad Icon.png */; };
+		94C958BB199AEFF4007D6238 /* Face Auth Simul.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C958BA199AEFF4007D6238 /* Face Auth Simul.png */; };
+		94C958BE199B8346007D6238 /* MyAuthSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C958BD199B8346007D6238 /* MyAuthSelectorViewController.m */; };
+		94C958C1199B83FB007D6238 /* MyPinAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C958C0199B83FB007D6238 /* MyPinAuthViewController.m */; };
+		94C958C4199B8431007D6238 /* MyFaceAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C958C3199B8431007D6238 /* MyFaceAuthViewController.m */; };
 		94FAB2881997C8200087263F /* eTIS-Bank App Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 94FAB2871997C8200087263F /* eTIS-Bank App Icon.png */; };
 		94FAB28D1997CA740087263F /* Background + Rectangle 7 + Your Bank.png in Resources */ = {isa = PBXBuildFile; fileRef = 94FAB2891997CA740087263F /* Background + Rectangle 7 + Your Bank.png */; };
 		94FAB28E1997CA740087263F /* Line.png in Resources */ = {isa = PBXBuildFile; fileRef = 94FAB28A1997CA740087263F /* Line.png */; };
@@ -68,6 +75,16 @@
 		94ACEF301997C793003B7244 /* eTIS-BankTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "eTIS-BankTests-Info.plist"; sourceTree = "<group>"; };
 		94ACEF321997C793003B7244 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		94ACEF341997C793003B7244 /* eTIS_BankTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eTIS_BankTests.m; sourceTree = "<group>"; };
+		94C958B4199AD8BE007D6238 /* Backspace Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Backspace Icon.png"; sourceTree = "<group>"; };
+		94C958B5199AD8BE007D6238 /* Login Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login Background.png"; sourceTree = "<group>"; };
+		94C958B6199AD8BE007D6238 /* Pin Pad Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pin Pad Icon.png"; sourceTree = "<group>"; };
+		94C958BA199AEFF4007D6238 /* Face Auth Simul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Face Auth Simul.png"; sourceTree = "<group>"; };
+		94C958BC199B8346007D6238 /* MyAuthSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAuthSelectorViewController.h; sourceTree = "<group>"; };
+		94C958BD199B8346007D6238 /* MyAuthSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAuthSelectorViewController.m; sourceTree = "<group>"; };
+		94C958BF199B83FB007D6238 /* MyPinAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPinAuthViewController.h; sourceTree = "<group>"; };
+		94C958C0199B83FB007D6238 /* MyPinAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPinAuthViewController.m; sourceTree = "<group>"; };
+		94C958C2199B8431007D6238 /* MyFaceAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFaceAuthViewController.h; sourceTree = "<group>"; };
+		94C958C3199B8431007D6238 /* MyFaceAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFaceAuthViewController.m; sourceTree = "<group>"; };
 		94FAB2871997C8200087263F /* eTIS-Bank App Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eTIS-Bank App Icon.png"; sourceTree = "<group>"; };
 		94FAB2891997CA740087263F /* Background + Rectangle 7 + Your Bank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background + Rectangle 7 + Your Bank.png"; sourceTree = "<group>"; };
 		94FAB28A1997CA740087263F /* Line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Line.png; sourceTree = "<group>"; };
@@ -142,12 +159,18 @@
 		94ACEF0F1997C793003B7244 /* eTIS-Bank */ = {
 			isa = PBXGroup;
 			children = (
-				94EF0A92199964BA00FA9DDB /* iPad */,
 				94ACEF181997C793003B7244 /* AppDelegate.h */,
 				94ACEF191997C793003B7244 /* AppDelegate.m */,
 				94FAB29F199801920087263F /* OpenAccountRootViewController.h */,
 				94FAB2A0199801920087263F /* OpenAccountRootViewController.m */,
 				94ACEF1B1997C793003B7244 /* Main.storyboard */,
+				94C958C2199B8431007D6238 /* MyFaceAuthViewController.h */,
+				94C958C3199B8431007D6238 /* MyFaceAuthViewController.m */,
+				94C958BF199B83FB007D6238 /* MyPinAuthViewController.h */,
+				94C958C0199B83FB007D6238 /* MyPinAuthViewController.m */,
+				94C958BC199B8346007D6238 /* MyAuthSelectorViewController.h */,
+				94C958BD199B8346007D6238 /* MyAuthSelectorViewController.m */,
+				94C958BA199AEFF4007D6238 /* Face Auth Simul.png */,
 				94ACEF1E1997C793003B7244 /* ViewController.h */,
 				94ACEF1F1997C793003B7244 /* ViewController.m */,
 				94FAB2911997DBFB0087263F /* OpenAccountPresentationViewController.h */,
@@ -165,6 +188,9 @@
 		94ACEF101997C793003B7244 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				94C958B4199AD8BE007D6238 /* Backspace Icon.png */,
+				94C958B5199AD8BE007D6238 /* Login Background.png */,
+				94C958B6199AD8BE007D6238 /* Pin Pad Icon.png */,
 				9430F4961999832D0058B043 /* PinPad Pad.png */,
 				94FAB2891997CA740087263F /* Background + Rectangle 7 + Your Bank.png */,
 				94FAB28A1997CA740087263F /* Line.png */,
@@ -195,13 +221,6 @@
 				94ACEF311997C793003B7244 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		94EF0A92199964BA00FA9DDB /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,14 +308,18 @@
 				94FAB28F1997CA740087263F /* Login Button.png in Resources */,
 				94FAB28D1997CA740087263F /* Background + Rectangle 7 + Your Bank.png in Resources */,
 				94ACEF221997C793003B7244 /* Images.xcassets in Resources */,
+				94C958B7199AD8BE007D6238 /* Backspace Icon.png in Resources */,
 				94FAB2881997C8200087263F /* eTIS-Bank App Icon.png in Resources */,
 				9430F4971999832D0058B043 /* PinPad Pad.png in Resources */,
+				94C958B9199AD8BE007D6238 /* Pin Pad Icon.png in Resources */,
 				94FAB28E1997CA740087263F /* Line.png in Resources */,
+				94C958BB199AEFF4007D6238 /* Face Auth Simul.png in Resources */,
 				94FAB2901997CA740087263F /* Open Account Button.png in Resources */,
 				94ACEF141997C793003B7244 /* InfoPlist.strings in Resources */,
 				94ACEF1D1997C793003B7244 /* Main.storyboard in Resources */,
 				94FAB29D1997E3080087263F /* AccountOpeningPresentation3.png in Resources */,
 				94FAB29E1997E3080087263F /* AccountOpeningPresentation4.png in Resources */,
+				94C958B8199AD8BE007D6238 /* Login Background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +357,9 @@
 				94FAB2931997DBFB0087263F /* OpenAccountPresentationViewController.m in Sources */,
 				94ACEF201997C793003B7244 /* ViewController.m in Sources */,
 				94ACEF1A1997C793003B7244 /* AppDelegate.m in Sources */,
+				94C958C4199B8431007D6238 /* MyFaceAuthViewController.m in Sources */,
+				94C958C1199B83FB007D6238 /* MyPinAuthViewController.m in Sources */,
+				94C958BE199B8346007D6238 /* MyAuthSelectorViewController.m in Sources */,
 				94ACEF161997C793003B7244 /* main.m in Sources */,
 				94FAB2A1199801920087263F /* OpenAccountRootViewController.m in Sources */,
 			);
