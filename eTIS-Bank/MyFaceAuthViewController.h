@@ -13,6 +13,7 @@
 {
     IBOutlet UIView *previewView;
     
+    __weak IBOutlet UIImageView *FaceDetectedOverlay;
     AVCaptureVideoPreviewLayer *previewLayer;
     AVCaptureVideoDataOutput *videoDataOutput;
 
@@ -23,6 +24,8 @@
     UIImage *faceGuide;
     
     CIDetector *faceDetector;
+    BOOL faceDetected;
+    
 }
 
 @end

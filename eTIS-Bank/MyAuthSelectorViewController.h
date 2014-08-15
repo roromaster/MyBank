@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyFaceAuthViewController.h"
+#import "MyPinAuthViewController.h"
 
-@interface MyAuthSelectorViewController : UIPageViewController
+@interface MyAuthSelectorViewController : UIPageViewController<UIPageViewControllerDataSource>
+{
 
+    MyPinAuthViewController *PinViewController;
+    MyFaceAuthViewController *FaceViewController;
+    
+}
 @end

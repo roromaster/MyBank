@@ -28,11 +28,112 @@
     [super viewDidLoad];
     
     [self setupAVCapture];
+    faceDetected = FALSE;
+    FaceDetectedOverlay.hidden = FALSE;
+    FaceDetectedOverlay.alpha = 0.3;
+    
+     NSLog(@"view Face didload");
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
+{
+    // got an image
+    CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+    CFDictionaryRef attachments = CMCopyDictionaryOfAttachments(kCFAllocatorDefault, sampleBuffer, kCMAttachmentMode_ShouldPropagate);
+    CIImage *ciImage = [[CIImage alloc] initWithCVPixelBuffer:pixelBuffer options:(__bridge NSDictionary *)attachments];
+    if (attachments)
+        CFRelease(attachments);
+    NSDictionary *imageOptions = nil;
+    UIDeviceOrientation curDeviceOrientation = [[UIDevice currentDevice] orientation];
+    int exifOrientation;
+    
+    enum {
+        PHOTOS_EXIF_0ROW_TOP_0COL_LEFT			= 1, //   1  =  0th row is at the top, and 0th column is on the left (THE DEFAULT).
+        PHOTOS_EXIF_0ROW_TOP_0COL_RIGHT			= 2, //   2  =  0th row is at the top, and 0th column is on the right.
+        PHOTOS_EXIF_0ROW_BOTTOM_0COL_RIGHT      = 3, //   3  =  0th row is at the bottom, and 0th column is on the right.
+        PHOTOS_EXIF_0ROW_BOTTOM_0COL_LEFT       = 4, //   4  =  0th row is at the bottom, and 0th column is on the left.
+        PHOTOS_EXIF_0ROW_LEFT_0COL_TOP          = 5, //   5  =  0th row is on the left, and 0th column is the top.
+        PHOTOS_EXIF_0ROW_RIGHT_0COL_TOP         = 6, //   6  =  0th row is on the right, and 0th column is the top.
+        PHOTOS_EXIF_0ROW_RIGHT_0COL_BOTTOM      = 7, //   7  =  0th row is on the right, and 0th column is the bottom.
+        PHOTOS_EXIF_0ROW_LEFT_0COL_BOTTOM       = 8  //   8  =  0th row is on the left, and 0th column is the bottom.
+    };
+    
+    switch (curDeviceOrientation) {
+        case UIDeviceOrientationPortraitUpsideDown:  // Device oriented vertically, home button on the top
+            exifOrientation = PHOTOS_EXIF_0ROW_LEFT_0COL_BOTTOM;
+            break;
+        case UIDeviceOrientationLandscapeLeft:       // Device oriented horizontally, home button on the right
+                exifOrientation = PHOTOS_EXIF_0ROW_BOTTOM_0COL_RIGHT;
+            break;
+        case UIDeviceOrientationLandscapeRight:      // Device oriented horizontally, home button on the left
+                exifOrientation = PHOTOS_EXIF_0ROW_TOP_0COL_LEFT;
+            break;
+        case UIDeviceOrientationPortrait:            // Device oriented vertically, home button on the bottom
+        default:
+            exifOrientation = PHOTOS_EXIF_0ROW_RIGHT_0COL_TOP;
+            break;
+    }
+    
+    imageOptions = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:exifOrientation] forKey:CIDetectorImageOrientation];
+    NSArray *features = [faceDetector featuresInImage:ciImage options:imageOptions];
+
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
+        [self IsFaceDetected:features];
+    });
+}
+
+-(void) IsFaceDetected: (NSArray *) features
+{
+    if ([features count])
+    {
+        NSLog(@"FaceDetected");
+        if (!faceDetected)
+        {
+            NSLog(@"FaceDetected Animation");
+            
+            [UIView beginAnimations:@"FaceDetected" context:nil];
+            [UIView setAnimationBeginsFromCurrentState:TRUE];
+            [UIView setAnimationDuration:1.0];
+            FaceDetectedOverlay.alpha = 0.7;
+            CATransition *transition = [CATransition animation];
+            transition.duration = 1.0f;
+            transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+            transition.type = kCATransitionFade;
+            
+            [FaceDetectedOverlay.layer addAnimation:transition forKey:nil];
+            [FaceDetectedOverlay setImage:[UIImage imageNamed: @"FaceOverlayDetected.png"]];
+            [UIView commitAnimations];
+            faceDetected = TRUE;
+        }
+    }
+    else
+    {
+        NSLog(@"FaceNotDetected");
+        if (faceDetected)
+        {
+            NSLog(@"FaceUnDetected Animation");
+            [UIView beginAnimations:@"FaceUnDetected" context:nil];
+            [UIView setAnimationDuration:1.0];
+            [UIView setAnimationBeginsFromCurrentState:TRUE];
+            FaceDetectedOverlay.alpha = 0.3;
+            CATransition *transition = [CATransition animation];
+            transition.duration = 1.0f;
+            transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+            transition.type = kCATransitionFade;
+            
+            [FaceDetectedOverlay.layer addAnimation:transition forKey:nil];
+            [FaceDetectedOverlay setImage:[UIImage imageNamed: @"FaceOverlay.png"]];
+            
+            [UIView commitAnimations];
+            faceDetected = FALSE;
+            
+        }
+    }
 }
 
 /*
@@ -114,7 +215,7 @@
     
     if ( [session canAddOutput:videoDataOutput] )
         [session addOutput:videoDataOutput];
-    [[videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:NO];
+    [[videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:YES];
     
     previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
     [previewLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
