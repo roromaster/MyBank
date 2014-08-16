@@ -309,13 +309,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Login Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="4yk-A8-hNK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBn-vN-Abe">
-                                <rect key="frame" x="0.0" y="100" width="325" height="200"/>
-                            </scrollView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MOx-y9-PV0">
                                 <rect key="frame" x="0.0" y="297" width="320" height="210"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBn-vN-Abe">
+                                <rect key="frame" x="0.0" y="100" width="325" height="200"/>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Select Item.png" translatesAutoresizingMaskIntoConstraints="NO" id="6jg-DW-XyI">
+                                <rect key="frame" x="0.0" y="297" width="320" height="44"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -401,6 +404,7 @@
         <image name="Open Account Button.png" width="320" height="320"/>
         <image name="PinPad Pad.png" width="640" height="648"/>
         <image name="Scanning Line.png" width="640" height="30"/>
+        <image name="Select Item.png" width="640" height="64"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
