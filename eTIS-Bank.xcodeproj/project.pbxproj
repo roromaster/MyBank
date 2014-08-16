@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		94051CC819994D020070A485 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94051CC719994D020070A485 /* Crashlytics.framework */; };
 		9430F4971999832D0058B043 /* PinPad Pad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9430F4961999832D0058B043 /* PinPad Pad.png */; };
+		944FF19B199EA8A200EA07BA /* Scanning Line.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FF19A199EA8A200EA07BA /* Scanning Line.png */; };
 		94ACEF0A1997C793003B7244 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ACEF091997C793003B7244 /* Foundation.framework */; };
 		94ACEF0C1997C793003B7244 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ACEF0B1997C793003B7244 /* CoreGraphics.framework */; };
 		94ACEF0E1997C793003B7244 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ACEF0D1997C793003B7244 /* UIKit.framework */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		94051CC719994D020070A485 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		9430F4961999832D0058B043 /* PinPad Pad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PinPad Pad.png"; sourceTree = "<group>"; };
+		944FF19A199EA8A200EA07BA /* Scanning Line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scanning Line.png"; sourceTree = "<group>"; };
 		94ACEF061997C793003B7244 /* eTIS-Bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eTIS-Bank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94ACEF091997C793003B7244 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94ACEF0B1997C793003B7244 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -172,6 +174,7 @@
 				94C958C0199B83FB007D6238 /* MyPinAuthViewController.m */,
 				94C958BC199B8346007D6238 /* MyAuthSelectorViewController.h */,
 				94C958BD199B8346007D6238 /* MyAuthSelectorViewController.m */,
+				944FF19A199EA8A200EA07BA /* Scanning Line.png */,
 				94ACEF1E1997C793003B7244 /* ViewController.h */,
 				94ACEF1F1997C793003B7244 /* ViewController.m */,
 				94FAB2911997DBFB0087263F /* OpenAccountPresentationViewController.h */,
@@ -309,6 +312,7 @@
 				94FAB29B1997E3080087263F /* AccountOpeningPresentation1.png in Resources */,
 				94FAB29C1997E3080087263F /* AccountOpeningPresentation2.png in Resources */,
 				94FAB28F1997CA740087263F /* Login Button.png in Resources */,
+				944FF19B199EA8A200EA07BA /* Scanning Line.png in Resources */,
 				94FAB28D1997CA740087263F /* Background + Rectangle 7 + Your Bank.png in Resources */,
 				94ACEF221997C793003B7244 /* Images.xcassets in Resources */,
 				94C958B7199AD8BE007D6238 /* Backspace Icon.png in Resources */,
@@ -500,6 +504,7 @@
 				GCC_PREFIX_HEADER = "eTIS-Bank/eTIS-Bank-Prefix.pch";
 				INFOPLIST_FILE = "eTIS-Bank/eTIS-Bank-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -520,6 +525,7 @@
 				GCC_PREFIX_HEADER = "eTIS-Bank/eTIS-Bank-Prefix.pch";
 				INFOPLIST_FILE = "eTIS-Bank/eTIS-Bank-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

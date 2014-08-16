@@ -16,8 +16,62 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"Pin Did Load");
     // Do any additional setup after loading the view.
+    _pinButton1x1.alpha = 0;
+    _pinButton1x2.alpha = 0;
+    _pinButton1x3.alpha = 0;
+    _pinButton1x4.alpha = 0;
+    _pinButton2x1.alpha = 0;
+    _pinButton2x2.alpha = 0;
+    _pinButton2x3.alpha = 0;
+    _pinButton2x4.alpha = 0;
+    _pinButton3x1.alpha = 0;
+    _pinButton3x2.alpha = 0;
+    _pinButton3x3.alpha = 0;
+    _pinButton3x4.alpha = 0;
+    _pinButton4x1.alpha = 0;
+    _pinButton4x2.alpha = 0;
+    _pinButton4x3.alpha = 0;
+    _pinButtonOK.alpha = 0;
 }
+
+-(void) viewWillLayoutSubviews
+{
+    [UIView animateWithDuration:2.0f
+                          delay:0
+                        options:UIViewAnimationOptionAllowUserInteraction
+                     animations:^ {
+                         _pinButton1x1.alpha = 1;
+                         _pinButton1x2.alpha = 1;
+                         _pinButton1x3.alpha = 1;
+                         _pinButton1x4.alpha = 1;
+                         _pinButton2x1.alpha = 1;
+                         _pinButton2x2.alpha = 1;
+                         _pinButton2x3.alpha = 1;
+                         _pinButton2x4.alpha = 1;
+                         _pinButton3x1.alpha = 1;
+                         _pinButton3x2.alpha = 1;
+                         _pinButton3x3.alpha = 1;
+                         _pinButton3x4.alpha = 1;
+                         _pinButton4x1.alpha = 1;
+                         _pinButton4x2.alpha = 1;
+                         _pinButton4x3.alpha = 1;
+                         _pinButtonOK.alpha = 1;
+                     }
+                     completion:^(BOOL completed){
+                         if (completed == TRUE)
+                             NSLog(@"Animation Pin finished");
+                     }
+     ];
+
+    
+}
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"Pin Did Appear");
+   }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

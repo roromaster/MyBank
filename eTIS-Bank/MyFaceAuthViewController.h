@@ -20,6 +20,8 @@
     dispatch_queue_t videoDataOutputQueue;
     AVCaptureStillImageOutput *stillImageOutput;
     
+    __weak IBOutlet UIImageView *ScanningLine;
+    CGPoint scanningLineInitialPosition;
     UIView *flashView;
     UIImage *faceGuide;
     

@@ -10,11 +10,12 @@
 #import "MyFaceAuthViewController.h"
 #import "MyPinAuthViewController.h"
 
-@interface MyAuthSelectorViewController : UIPageViewController<UIPageViewControllerDataSource>
+@interface MyAuthSelectorViewController : UIPageViewController<UIPageViewControllerDataSource, UINavigationBarDelegate>
 {
 
     MyPinAuthViewController *PinViewController;
     MyFaceAuthViewController *FaceViewController;
+    UIButton *BackButton;
     
 }
 @end

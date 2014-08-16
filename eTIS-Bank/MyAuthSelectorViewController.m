@@ -23,9 +23,6 @@
     [background sizeToFit];
     [background setFrame:self.view.frame];
     [background setBounds:self.view.bounds];
-    
-//    [[self view] setBackgroundColor:[[UIColor alloc] initWithPatternImage:background.image]];
-//    [[self view] setBackgroundColor:[UIColor clearColor]];
    
 
     UIStoryboard *storyboard =
@@ -37,13 +34,21 @@
     FaceViewController =[storyboard
                          instantiateViewControllerWithIdentifier:@"FaceAuth"];
     
-    [PinViewController view];
-    [FaceViewController view];
-    
     
     [self.view addSubview:background];
 
     background.layer.zPosition = -1;
+    
+    BackButton = [[UIButton alloc] initWithFrame: CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + 50, 60, 60)];
+    
+    [BackButton setTitle:@"Back" forState:nil];
+    [BackButton addTarget:self
+                 action:@selector(AutheSelectExit)
+       forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:BackButton];
+    
+    //Make the Navigation Bar Translucent
     
     NSLog(@"view controllers instantiated");
     
@@ -56,8 +61,41 @@
                               direction:UIPageViewControllerNavigationDirectionForward
                                animated:YES
                              completion:nil];
+
+        [PinViewController view];
+        [FaceViewController view];
     
 }
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+}
+
+
+- (void) AutheSelectExit
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPushItem:(UINavigationItem *)item {
+    NSLog(@"%s", __FUNCTION__);
+    return YES;
+}
+- (void)navigationBar:(UINavigationBar *)navigationBar didPushItem:(UINavigationItem *)item {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item {
+    NSLog(@"%s", __FUNCTION__);
+    return YES;
+}
+- (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -113,6 +151,9 @@
     
     return [self viewControllerAtIndex:index];
 }
+
+
+
 
 
 /*

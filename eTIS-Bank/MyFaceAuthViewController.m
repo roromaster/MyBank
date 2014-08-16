@@ -31,9 +31,33 @@
     faceDetected = FALSE;
     FaceDetectedOverlay.hidden = FALSE;
     FaceDetectedOverlay.alpha = 0.3;
+    self->ScanningLine.alpha = 0;
+    scanningLineInitialPosition = CGPointMake(self->ScanningLine.center.x, self->ScanningLine.center.y);
     
      NSLog(@"view Face didload");
 }
+
+- (void) viewDidAppear:(BOOL)animated
+{
+
+    [super viewDidAppear:animated];
+
+    NSLog(@"ViewDidAppear");
+    
+//    [UIView animateWithDuration:2.0f
+//                          delay:0.0f
+//                        options:UIViewAnimationOptionAutoreverse| UIViewAnimationOptionRepeat|UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState
+//                     animations:^ {
+//                         self->ScanningLine.alpha = 0.3;
+//                         self->ScanningLine.layer.position= CGPointMake(0, 400);
+//                     }
+//                     completion:nil];
+    
+    
+
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -87,8 +111,16 @@
     });
 }
 
+
+-(void) viewWillLayoutSubviews
+
+{
+    
+}
+
 -(void) IsFaceDetected: (NSArray *) features
 {
+
     if ([features count])
     {
         NSLog(@"FaceDetected");
@@ -99,6 +131,7 @@
             [UIView beginAnimations:@"FaceDetected" context:nil];
             [UIView setAnimationBeginsFromCurrentState:TRUE];
             [UIView setAnimationDuration:1.0];
+            
             FaceDetectedOverlay.alpha = 0.7;
             CATransition *transition = [CATransition animation];
             transition.duration = 1.0f;
@@ -108,6 +141,28 @@
             [FaceDetectedOverlay.layer addAnimation:transition forKey:nil];
             [FaceDetectedOverlay setImage:[UIImage imageNamed: @"FaceOverlayDetected.png"]];
             [UIView commitAnimations];
+            
+            self->ScanningLine.alpha = 1;
+            self->ScanningLine.center = scanningLineInitialPosition;
+            
+            [UIView animateWithDuration:3.0f
+                                delay:0.0f
+             
+                                options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionLayoutSubviews|UIViewAnimationOptionAllowAnimatedContent
+             
+                                animations:^ {
+                                 
+                                 self->ScanningLine.alpha = 0.3;
+                                 self->ScanningLine.center= CGPointMake(ScanningLine.center.x, ScanningLine.center.y + 250);
+                                }
+                                completion:^(BOOL finished) {
+                              
+                                    if (finished)
+                                 self->ScanningLine.alpha = 0;
+                                 
+                                }
+             ];
+
             faceDetected = TRUE;
         }
     }

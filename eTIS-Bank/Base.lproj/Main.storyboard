@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A299l" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="14A299l" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -211,6 +212,24 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="pinButton1x1" destination="Dyq-DA-5je" id="Pw1-xQ-Dbt"/>
+                        <outlet property="pinButton1x2" destination="uEO-gc-b2g" id="twP-Yb-g2g"/>
+                        <outlet property="pinButton1x3" destination="3pa-Yk-Ukh" id="PFt-uA-jN6"/>
+                        <outlet property="pinButton1x4" destination="lTU-Ih-4xA" id="vFC-aI-hnU"/>
+                        <outlet property="pinButton2x1" destination="V82-ha-e71" id="qKa-XT-NBx"/>
+                        <outlet property="pinButton2x2" destination="RwL-DX-9Nl" id="5qt-A9-4vl"/>
+                        <outlet property="pinButton2x3" destination="5Jn-b7-458" id="Cly-Ko-4UT"/>
+                        <outlet property="pinButton2x4" destination="6U9-q2-Ccl" id="8rq-vY-XzN"/>
+                        <outlet property="pinButton3x1" destination="rKX-EK-PkG" id="5di-oG-18Q"/>
+                        <outlet property="pinButton3x2" destination="OEg-2V-9xd" id="skI-jt-Iei"/>
+                        <outlet property="pinButton3x3" destination="7ch-o8-RXk" id="xw3-ZO-5Ug"/>
+                        <outlet property="pinButton3x4" destination="ecK-8K-rJB" id="osR-uh-DwK"/>
+                        <outlet property="pinButton4x1" destination="pSM-pI-UFP" id="HKZ-vG-fFr"/>
+                        <outlet property="pinButton4x2" destination="Q9f-hU-fwe" id="YVb-IZ-XaJ"/>
+                        <outlet property="pinButton4x3" destination="9tR-Ii-FwU" id="0KZ-L7-F4r"/>
+                        <outlet property="pinButtonOK" destination="aDy-Yw-2ZR" id="11F-e2-UnR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dfr-Dv-yRI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,23 +256,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HRr-6c-Gvd">
-                                <rect key="frame" x="0.0" y="193" width="320" height="325"/>
+                                <rect key="frame" x="0.0" y="193" width="320" height="320"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FaceOverlay.png" translatesAutoresizingMaskIntoConstraints="NO" id="scR-k8-4mD">
+                                <rect key="frame" x="0.0" y="270" width="320" height="250"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Center your FACE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1Y-gW-8eq">
                                 <rect key="frame" x="63" y="130" width="195" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FaceOverlay.png" translatesAutoresizingMaskIntoConstraints="NO" id="scR-k8-4mD">
-                                <rect key="frame" x="-35" y="200" width="389" height="325"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Scanning Line.png" translatesAutoresizingMaskIntoConstraints="NO" id="hhy-sa-wOl">
+                                <rect key="frame" x="0.0" y="276" width="320" height="16"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="FaceDetectedOverlay" destination="scR-k8-4mD" id="EXd-KA-KQS"/>
+                        <outlet property="ScanningLine" destination="hhy-sa-wOl" id="mag-g1-Dbf"/>
                         <outlet property="previewView" destination="HRr-6c-Gvd" id="cs0-pk-0bw"/>
                     </connections>
                 </viewController>
@@ -332,11 +356,15 @@
         <image name="Login Button.png" width="320" height="320"/>
         <image name="Open Account Button.png" width="320" height="320"/>
         <image name="PinPad Pad.png" width="640" height="648"/>
+        <image name="Scanning Line.png" width="640" height="30"/>
     </resources>
-    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
     </simulatedMetricsContainer>
+    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
 </document>
