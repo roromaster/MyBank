@@ -118,6 +118,14 @@ CGFloat cell_size = 0;
 
 
 
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    
+    if(decelerate) return;
+    
+    [self scrollViewDidEndDecelerating:scrollView];
+}
+
+
 - (void)scrollViewDidEndDecelerating:(UITableView *)scrollView {
     
     
