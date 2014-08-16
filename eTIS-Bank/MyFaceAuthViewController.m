@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     // Do any additional setup after loading the view.
+
     
     NSDictionary *detectorOptions = [[NSDictionary alloc] initWithObjectsAndKeys:CIDetectorAccuracyLow, CIDetectorAccuracy, nil];
     

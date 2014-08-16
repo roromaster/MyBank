@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
     
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Login Background.png"]];
@@ -39,7 +40,7 @@
 
     background.layer.zPosition = -1;
     
-    BackButton = [[UIButton alloc] initWithFrame: CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + 50, 60, 60)];
+    BackButton = [[UIButton alloc] initWithFrame: CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + 20, 60, 60)];
     
     [BackButton setTitle:@"Back" forState:nil];
     [BackButton addTarget:self
@@ -132,7 +133,7 @@
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
     }
-    NSLog(@"After - Index:%i",index);
+    NSLog(@"After - Index:%lu",(unsigned long)index);
     index--;
     
     return [self viewControllerAtIndex:index];
@@ -146,7 +147,7 @@
     if (index == NSNotFound) {
         return nil;
     }
-    NSLog(@"After - Index:%i",index);
+    NSLog(@"After - Index:%lu",(unsigned long)index);
     index++;
     
     return [self viewControllerAtIndex:index];

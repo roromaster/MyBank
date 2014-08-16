@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+
     NSLog(@"Pin Did Load");
     // Do any additional setup after loading the view.
     _pinButton1x1.alpha = 0;

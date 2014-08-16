@@ -63,6 +63,14 @@
     self.MypageControl.numberOfPages = [self.pageContent count];
 
     [self.view bringSubviewToFront:self.MypageControl];
+    
+    BackButton = [[UIButton alloc] initWithFrame: CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + 20, 60, 60)];
+    
+    [BackButton setTitle:@"Back" forState:nil];
+    [BackButton addTarget:self
+                   action:@selector(AutheSelectExit)
+         forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:BackButton];
 
 }
 
@@ -128,7 +136,7 @@
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
     }
-        NSLog(@"After - Index:%i",index);
+        NSLog(@"After - Index:%lu",(unsigned long)index);
     index--;
 
     return [self viewControllerAtIndex:index];
@@ -142,7 +150,7 @@
     if (index == NSNotFound) {
         return nil;
     }
-    NSLog(@"After - Index:%i",index);
+    NSLog(@"After - Index:%lu",(unsigned long)index);
     index++;
 
     
@@ -159,6 +167,13 @@
     
 
     
+}
+
+
+
+- (void) AutheSelectExit
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 //- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
 //{
