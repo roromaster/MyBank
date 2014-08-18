@@ -58,9 +58,9 @@
 
     [self setViewControllers:viewControllers
                    direction:UIPageViewControllerNavigationDirectionForward
-                    animated:YES
+                    animated:animated
                   completion:nil];
-
+    
 }
 
 
@@ -141,8 +141,6 @@
     
     return [self viewControllerAtIndex:index];
 }
-
-
 
 
 

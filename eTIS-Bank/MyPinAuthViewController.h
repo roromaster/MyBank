@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyPinAuthViewController : UIViewController
+@interface MyPinAuthViewController : UIViewController <UIViewControllerAnimatedTransitioning>
 @property (weak, nonatomic) IBOutlet UIButton *pinButton1x1;
 @property (weak, nonatomic) IBOutlet UIButton *pinButton1x2;
 @property (weak, nonatomic) IBOutlet UIButton *pinButton1x3;
@@ -25,5 +25,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *pinButton4x2;
 @property (weak, nonatomic) IBOutlet UIButton *pinButton4x3;
 @property (weak, nonatomic) IBOutlet UIButton *pinButtonOK;
+
+@property (weak, nonatomic) IBOutlet UIButton *backspace;
+@property (weak, nonatomic) IBOutlet UILabel *pinValue;
+
+- (IBAction)buttonTapped:(id)sender;
+
+
+
 
 @end

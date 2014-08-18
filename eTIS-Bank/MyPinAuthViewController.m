@@ -12,12 +12,13 @@
 
 @end
 
+NSString * pinValue;
+
+
 @implementation MyPinAuthViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-   // [self shufflePin];
     NSLog(@"Pin Did Load");
     // Do any additional setup after loading the view.
     _pinButton1x1.alpha = 0;
@@ -37,13 +38,17 @@
     _pinButton4x3.alpha = 0;
     _pinButtonOK.alpha = 0;
     
+    pinValue = @"";
+    
 }
 
 -(void) viewWillLayoutSubviews
 {
+    
+    [super viewWillLayoutSubviews];
     [UIView animateWithDuration:2.0f
                           delay:0
-                        options:UIViewAnimationOptionAllowUserInteraction
+                        options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionAllowAnimatedContent
                      animations:^ {
                          _pinButton1x1.alpha = 1;
                          _pinButton1x2.alpha = 1;
@@ -61,38 +66,46 @@
                          _pinButton4x2.alpha = 1;
                          _pinButton4x3.alpha = 1;
                          _pinButtonOK.alpha = 1;
+                         
                      }
                      completion:^(BOOL completed){
                          if (completed == TRUE)
                              NSLog(@"Animation Pin finished");
                      }
-     
-     ];
-    
-    
-    [UIView animateWithDuration:4.0f
-                          delay:0
-                        options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState
-                     animations:^{
-                         [self shufflePin];
-                     }
-                     completion:nil];
+      ];
 
+    
     
 }
 - (void) viewDidAppear:(BOOL)animated
 {
-   [super viewDidAppear:animated];
+ 
+//    [super viewDidAppear:animated];
+    
     NSLog(@"Pin Did Appear");
-   
+    
+    [UIView animateWithDuration:4.0f
+                          delay:2
+                        options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState| UIViewAnimationOptionAllowAnimatedContent
+                     animations:^{
+                         [self shufflePin];
+                         
+                     }
+                     completion:^(BOOL finished)
+     {
+         //[self.view setNeedsDisplay];
+     }];
+    
+
+  
     
    }
+
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-
     
 }
 
@@ -107,14 +120,102 @@
     
     NSMutableArray *valueList= [[NSMutableArray alloc] initWithObjects: @"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"",@"",@"",@"",@"",nil];
     
-    for (int buttonIndex; buttonIndex <[buttonList count]; buttonIndex++)
+    for (int buttonIndex=0; buttonIndex <[buttonList count]; buttonIndex++)
     {
         NSInteger random = arc4random() % ([buttonList count] - buttonIndex);
         UIButton *currentButton = buttonList[buttonIndex];
         [currentButton setTitle:valueList[random] forState: UIControlStateNormal];
         [valueList removeObjectAtIndex:random];
     }
+}
+
+
+-(IBAction)buttonTapped:(id)sender
+{
+    UIButton *buttonpushed = (UIButton*)sender;
     
+    NSLog(@"Button Pushed");
+    
+    if ([buttonpushed isEqual:_pinButtonOK])
+         {
+             //OK Button pushed
+             
+         }
+    
+    else if ([buttonpushed isEqual:_backspace])
+    {
+        pinValue = [pinValue substringToIndex:[pinValue length] - 1];
+        
+        CATransition *animation = [CATransition animation];
+        animation.duration = 1.0;
+        animation.type = kCATransitionFade;
+        animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        [_pinValue.layer addAnimation:animation forKey:@"changeTextTransition"];
+        
+        // Change the text
+        
+        _pinValue.text = [_pinValue.text substringToIndex:[_pinValue.text length] -1];
+        
+        if ([pinValue length]<4)
+            _pinButtonOK.hidden = true;
+
+        if ([pinValue isEqualToString:@""])
+             {
+            _backspace.hidden = true;
+             }
+    }
+    
+         else
+         {
+        
+             NSString *newvalue;
+             NSString *pinValueHint;
+             [_pinValue setFont:[UIFont systemFontOfSize:80]];
+             
+             [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(securepinAnimation) userInfo:nil repeats:NO];
+             
+             newvalue = [NSString stringWithFormat:@"%@%@",pinValue, buttonpushed.titleLabel.text];
+
+             if ([pinValue length] > 0)
+                 pinValueHint = [NSString stringWithFormat:@"%@%@",_pinValue.text,buttonpushed.titleLabel.text];
+             else
+                 pinValueHint = [NSString stringWithFormat:@"%@",buttonpushed.titleLabel.text];
+             
+            pinValue = newvalue;
+             
+             CATransition *animation = [CATransition animation];
+             animation.duration = 1.0;
+             animation.type = kCATransitionFade;
+             animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+             [_pinValue.layer addAnimation:animation forKey:@"changeTextTransition"];
+             
+             // Change the text
+             _pinValue.text = pinValueHint;
+             
+             if ([pinValue length]>3)
+             _pinButtonOK.hidden = false;
+             
+             _backspace.hidden = false;
+             
+             
+
+             
+         }
+    
+}
+
+- (void) securepinAnimation
+{
+    NSMutableString *pinValueforScreen = [[NSMutableString alloc] init];
+
+    CATransition *animation = [CATransition animation];
+    animation.duration = 0.5;
+    animation.type = kCATransitionFade;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [_pinValue.layer addAnimation:animation forKey:@"changeTextTransition"];
+    for (int i=0;i< [pinValue length];i++)
+        [pinValueforScreen appendString:@"*"];
+    _pinValue.text = pinValueforScreen;
     
 }
 
@@ -127,5 +228,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end
