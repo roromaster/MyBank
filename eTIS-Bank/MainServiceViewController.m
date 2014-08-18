@@ -24,33 +24,33 @@ CGFloat cell_size = 0;
     
     NSInteger numberOfViews = 3;
     for (int i = 0; i < numberOfViews*100; i++) {
-        CGFloat yOrigin = i * 200;
+        CGFloat yOrigin = i * 220;
         UIImageView *preview;
         
         if (i%3 == 0)
         {
             preview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Balance PreView"]];
-            preview.frame =CGRectMake(0, yOrigin, self.view.frame.size.width, 200);
+            preview.frame =CGRectMake(0, yOrigin, self.view.frame.size.width, 220);
             
         }
         else if (i%3 == 1)
         {
             preview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WireTRansfer Preview 2"]];
-            preview.frame =CGRectMake(0, yOrigin, self.view.frame.size.width, 200);
+            preview.frame =CGRectMake(0, yOrigin, self.view.frame.size.width, 220);
             
 
         }
         else
         {
-            preview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Balance PreView"]];
-            preview.frame =CGRectMake(0, yOrigin, self.view.frame.size.width, 200);
+            preview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Card Preview"]];
+            preview.frame =CGRectMake(0, yOrigin, self.view.frame.size.width, 220);
 
         }
         
         [_mainDetailedView addSubview:preview];
     }
     
-    _mainDetailedView.contentSize = CGSizeMake(self.view.frame.size.width , 200* numberOfViews* 100 );
+    _mainDetailedView.contentSize = CGSizeMake(self.view.frame.size.width , 220* numberOfViews* 100 );
     _mainDetailedView.pagingEnabled = TRUE;
     _mainDetailedView.alwaysBounceHorizontal = NO;
     _mainDetailedView.bounces = NO;
@@ -61,21 +61,36 @@ CGFloat cell_size = 0;
     _mainServicesList.dataSource = self;
   //  _mainServicesList.pagingEnabled = true;
 
-    BackButton = [[UIButton alloc] initWithFrame: CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + 20, 60, 60)];
-    
-    [BackButton setTitle:@"Back" forState:nil];
-    [BackButton addTarget:self
-                   action:@selector(AutheSelectExit)
-         forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:BackButton];
-
     
     tableData = [NSArray arrayWithObjects:@"Account", @"Transfers", @"Credit Cards", nil];
+    
+    self.title = @"Services";
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    
+    
+
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    
+    
+
+}
+
+- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self scrollViewDidScroll:_mainServicesList];
 }
 
 
@@ -92,6 +107,8 @@ CGFloat cell_size = 0;
     
     cell.textLabel.text = [tableData objectAtIndex:indexPath.row% [tableData count]];
     cell_size = cell.frame.size.height;
+    
+    
     return cell;
     
 }
@@ -108,6 +125,28 @@ CGFloat cell_size = 0;
     {
     CGFloat actualPosition = scrollView_.contentOffset.y;
     CGFloat contentHeight = scrollView_.contentSize.height - ([tableData count]);
+        
+        
+        for (UITableViewCell *cell in _mainServicesList.visibleCells)
+                             {
+                                 if (cell.frame.origin.y< _mainServicesList.bounds.origin.y+cell_size*0.20)
+                                 {
+                                     
+                                     cell.textLabel.textColor = [UIColor blackColor];
+                                     cell.textLabel.font = [UIFont boldSystemFontOfSize:25];
+                                 }
+                                 else
+                                 {
+                                     cell.textLabel.textColor = [UIColor blackColor];
+                                     cell.textLabel.font = [UIFont systemFontOfSize:20];
+                                 }
+                            
+                             }
+    
+         
+        
+        
+         
     if (actualPosition >= contentHeight) {
         
         [self.mainServicesList reloadData];
@@ -115,11 +154,11 @@ CGFloat cell_size = 0;
         }
         CGPoint offset = _mainDetailedView.contentOffset;
         
-        offset.y = (_mainServicesList.contentOffset.y * (200/cell_size));
+        offset.y = (_mainServicesList.contentOffset.y * (220/cell_size));
         [_mainDetailedView setContentOffset:(offset)];
-    
+        
+        
         }
-    
 }
 
 
@@ -139,7 +178,6 @@ CGFloat cell_size = 0;
     {
     [scrollView scrollToRowAtIndexPath:[scrollView indexPathForRowAtPoint: CGPointMake(scrollView.contentOffset.x, scrollView.contentOffset.y+scrollView.rowHeight/2)] atScrollPosition:UITableViewScrollPositionTop animated:YES];
 
-
     }
 }
 
@@ -148,11 +186,12 @@ CGFloat cell_size = 0;
     
     if ([scrollView isEqual:_mainServicesList])
     {
-    if (_mainDetailedView.contentOffset.y <=([tableData count]-1)*200) {
-        [_mainDetailedView setContentOffset:CGPointMake(0,([tableData count]+([tableData count]-1))*200)];
+        
+    if (_mainDetailedView.contentOffset.y <=([tableData count]-1)*220) {
+        [_mainDetailedView setContentOffset:CGPointMake(0,([tableData count]+([tableData count]-1))*220)];
     }
-    else if (_mainDetailedView.contentOffset.y >=(2*([tableData count]))*200) {
-        [_mainDetailedView setContentOffset:CGPointMake(0,([tableData count])*200)];
+    else if (_mainDetailedView.contentOffset.y >=(2*([tableData count]))*220) {
+        [_mainDetailedView setContentOffset:CGPointMake(0,([tableData count])*220)];
     }
     }
 }
@@ -162,6 +201,24 @@ CGFloat cell_size = 0;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ((indexPath.row%[tableData count]) == 0)
+    {
+        UIStoryboard *storyboard =
+        [UIStoryboard storyboardWithName:@"Main"
+                                  bundle:[NSBundle mainBundle]];
+        UIViewController * accountdetails;
+        
+        accountdetails = [storyboard
+                          instantiateViewControllerWithIdentifier:@"AccountDetails"];
+
+        [self.navigationController pushViewController:accountdetails animated:TRUE];
+        
+        
+    }
+}
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

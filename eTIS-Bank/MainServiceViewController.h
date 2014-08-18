@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainServiceViewController : UIViewController <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface MainServiceViewController : UIViewController <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource,UINavigationControllerDelegate>
 {
-    UIButton *BackButton;
+
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *mainDetailedView;
 @property (weak, nonatomic) IBOutlet UITableView *mainServicesList;

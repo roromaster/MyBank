@@ -64,14 +64,7 @@
 
     [self.view bringSubviewToFront:self.MypageControl];
     
-    BackButton = [[UIButton alloc] initWithFrame: CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + 20, 60, 60)];
-    
-    [BackButton setTitle:@"Back" forState:nil];
-    [BackButton addTarget:self
-                   action:@selector(AutheSelectExit)
-         forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:BackButton];
-
+  
 }
 
 - (void)didReceiveMemoryWarning

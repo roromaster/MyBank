@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		94051CC819994D020070A485 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94051CC719994D020070A485 /* Crashlytics.framework */; };
 		9430F4971999832D0058B043 /* PinPad Pad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9430F4961999832D0058B043 /* PinPad Pad.png */; };
+		944DA22D19A171CB009840BF /* Card Preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 944DA22C19A171CB009840BF /* Card Preview.png */; };
+		944DA23019A2366F009840BF /* AccountDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944DA22F19A2366F009840BF /* AccountDetailsViewController.m */; };
+		944DA23219A24C11009840BF /* NavigationBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 944DA23119A24C11009840BF /* NavigationBar.png */; };
 		944FF19B199EA8A200EA07BA /* Scanning Line.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FF19A199EA8A200EA07BA /* Scanning Line.png */; };
 		94A5EC39199F8D1C00402CE3 /* MainServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A5EC38199F8D1C00402CE3 /* MainServiceViewController.m */; };
 		94A5EC3C199F9D4E00402CE3 /* Balance PreView.png in Resources */ = {isa = PBXBuildFile; fileRef = 94A5EC3A199F9D4E00402CE3 /* Balance PreView.png */; };
@@ -62,6 +65,10 @@
 /* Begin PBXFileReference section */
 		94051CC719994D020070A485 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		9430F4961999832D0058B043 /* PinPad Pad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PinPad Pad.png"; sourceTree = "<group>"; };
+		944DA22C19A171CB009840BF /* Card Preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card Preview.png"; sourceTree = "<group>"; };
+		944DA22E19A2366F009840BF /* AccountDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountDetailsViewController.h; sourceTree = "<group>"; };
+		944DA22F19A2366F009840BF /* AccountDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDetailsViewController.m; sourceTree = "<group>"; };
+		944DA23119A24C11009840BF /* NavigationBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationBar.png; sourceTree = "<group>"; };
 		944FF19A199EA8A200EA07BA /* Scanning Line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scanning Line.png"; sourceTree = "<group>"; };
 		94A5EC37199F8D1C00402CE3 /* MainServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainServiceViewController.h; sourceTree = "<group>"; };
 		94A5EC38199F8D1C00402CE3 /* MainServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainServiceViewController.m; sourceTree = "<group>"; };
@@ -174,9 +181,13 @@
 			children = (
 				94ACEF181997C793003B7244 /* AppDelegate.h */,
 				94ACEF191997C793003B7244 /* AppDelegate.m */,
+				94ACEF1E1997C793003B7244 /* ViewController.h */,
+				94ACEF1F1997C793003B7244 /* ViewController.m */,
+				94ACEF1B1997C793003B7244 /* Main.storyboard */,
+				944DA22E19A2366F009840BF /* AccountDetailsViewController.h */,
+				944DA22F19A2366F009840BF /* AccountDetailsViewController.m */,
 				94FAB29F199801920087263F /* OpenAccountRootViewController.h */,
 				94FAB2A0199801920087263F /* OpenAccountRootViewController.m */,
-				94ACEF1B1997C793003B7244 /* Main.storyboard */,
 				94A5EC37199F8D1C00402CE3 /* MainServiceViewController.h */,
 				94A5EC38199F8D1C00402CE3 /* MainServiceViewController.m */,
 				94C958C2199B8431007D6238 /* MyFaceAuthViewController.h */,
@@ -185,8 +196,6 @@
 				94C958C0199B83FB007D6238 /* MyPinAuthViewController.m */,
 				94C958BC199B8346007D6238 /* MyAuthSelectorViewController.h */,
 				94C958BD199B8346007D6238 /* MyAuthSelectorViewController.m */,
-				94ACEF1E1997C793003B7244 /* ViewController.h */,
-				94ACEF1F1997C793003B7244 /* ViewController.m */,
 				94FAB2911997DBFB0087263F /* OpenAccountPresentationViewController.h */,
 				94FAB2921997DBFB0087263F /* OpenAccountPresentationViewController.m */,
 				94ACEF211997C793003B7244 /* Images.xcassets */,
@@ -198,6 +207,8 @@
 		94ACEF101997C793003B7244 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				944DA23119A24C11009840BF /* NavigationBar.png */,
+				944DA22C19A171CB009840BF /* Card Preview.png */,
 				944FF19A199EA8A200EA07BA /* Scanning Line.png */,
 				94FAB2971997E3080087263F /* AccountOpeningPresentation1.png */,
 				94FAB2981997E3080087263F /* AccountOpeningPresentation2.png */,
@@ -327,10 +338,12 @@
 				94FAB29B1997E3080087263F /* AccountOpeningPresentation1.png in Resources */,
 				94FAB29C1997E3080087263F /* AccountOpeningPresentation2.png in Resources */,
 				94A5EC3F199FC7B200402CE3 /* Select Item.png in Resources */,
+				944DA22D19A171CB009840BF /* Card Preview.png in Resources */,
 				94FAB28F1997CA740087263F /* Login Button.png in Resources */,
 				944FF19B199EA8A200EA07BA /* Scanning Line.png in Resources */,
 				94FAB28D1997CA740087263F /* Background + Rectangle 7 + Your Bank.png in Resources */,
 				94ACEF221997C793003B7244 /* Images.xcassets in Resources */,
+				944DA23219A24C11009840BF /* NavigationBar.png in Resources */,
 				94A5EC3C199F9D4E00402CE3 /* Balance PreView.png in Resources */,
 				94C958B7199AD8BE007D6238 /* Backspace Icon.png in Resources */,
 				94FAB2881997C8200087263F /* eTIS-Bank App Icon.png in Resources */,
@@ -381,6 +394,7 @@
 			files = (
 				94FAB2931997DBFB0087263F /* OpenAccountPresentationViewController.m in Sources */,
 				94A5EC39199F8D1C00402CE3 /* MainServiceViewController.m in Sources */,
+				944DA23019A2366F009840BF /* AccountDetailsViewController.m in Sources */,
 				94ACEF201997C793003B7244 /* ViewController.m in Sources */,
 				94ACEF1A1997C793003B7244 /* AppDelegate.m in Sources */,
 				94C958C4199B8431007D6238 /* MyFaceAuthViewController.m in Sources */,

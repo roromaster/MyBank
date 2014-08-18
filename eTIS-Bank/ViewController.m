@@ -18,6 +18,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    self.navigationController.navigationBarHidden = false;
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                             forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor clearColor]};
+
+
+
 }
 
 - (void)didReceiveMemoryWarning

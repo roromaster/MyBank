@@ -40,37 +40,26 @@
 
     background.layer.zPosition = -1;
     
-    BackButton = [[UIButton alloc] initWithFrame: CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + 20, 60, 60)];
-    
-    [BackButton setTitle:@"Back" forState:nil];
-    [BackButton addTarget:self
-                 action:@selector(AutheSelectExit)
-       forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:BackButton];
-    
-    //Make the Navigation Bar Translucent
-    
     NSLog(@"view controllers instantiated");
     
     self.dataSource = self;
-    
-    NSArray *viewControllers = [[NSArray alloc] initWithObjects:PinViewController, nil];
-    
-    
-    [self setViewControllers:viewControllers
-                              direction:UIPageViewControllerNavigationDirectionForward
-                               animated:YES
-                             completion:nil];
 
-        [PinViewController view];
-        [FaceViewController view];
+    [PinViewController view];
     
+    [FaceViewController view];
+
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    NSArray *viewControllers = [[NSArray alloc] initWithObjects:PinViewController, nil];
+    
+
+    [self setViewControllers:viewControllers
+                   direction:UIPageViewControllerNavigationDirectionForward
+                    animated:YES
+                  completion:nil];
 
 }
 

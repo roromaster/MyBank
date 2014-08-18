@@ -11,7 +11,7 @@
 
 @interface OpenAccountRootViewController : UIViewController<UIPageViewControllerDataSource>
 {
-    UIButton *BackButton;
+
 }
 
 @property (strong, nonatomic) NSArray *pageContent;

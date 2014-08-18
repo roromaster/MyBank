@@ -44,16 +44,8 @@
     [super viewDidAppear:animated];
 
     NSLog(@"ViewDidAppear");
-    
-//    [UIView animateWithDuration:2.0f
-//                          delay:0.0f
-//                        options:UIViewAnimationOptionAutoreverse| UIViewAnimationOptionRepeat|UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState
-//                     animations:^ {
-//                         self->ScanningLine.alpha = 0.3;
-//                         self->ScanningLine.layer.position= CGPointMake(0, 400);
-//                     }
-//                     completion:nil];
-    
+    self->ScanningLine.alpha = 0;
+  
     
 
 
@@ -187,7 +179,9 @@
             
             [UIView commitAnimations];
             faceDetected = FALSE;
+            self->ScanningLine.alpha = 0;
             
+
         }
     }
 }

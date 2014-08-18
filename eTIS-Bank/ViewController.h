@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UINavigationControllerDelegate,UINavigationBarDelegate>
+
+
 
 @end
+UINavigationController *navigationController;
