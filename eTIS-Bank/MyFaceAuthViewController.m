@@ -45,12 +45,20 @@
 
     NSLog(@"ViewDidAppear");
     self->ScanningLine.alpha = 0;
-  
-    
-
 
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+
+- (void) viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+   // [session stopRunning];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -223,7 +231,7 @@
 {
     NSError *error = nil;
     
-    AVCaptureSession *session = [AVCaptureSession new];
+    session = [AVCaptureSession new];
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
         [session setSessionPreset:AVCaptureSessionPreset1280x720];
     else

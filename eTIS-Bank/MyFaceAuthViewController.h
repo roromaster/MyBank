@@ -14,6 +14,7 @@
     IBOutlet UIView *previewView;
     
     __weak IBOutlet UIImageView *FaceDetectedOverlay;
+    AVCaptureSession *session;
     AVCaptureVideoPreviewLayer *previewLayer;
     AVCaptureVideoDataOutput *videoDataOutput;
 
