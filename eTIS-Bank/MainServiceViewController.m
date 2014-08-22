@@ -10,6 +10,9 @@
 
 @interface MainServiceViewController ()
 
+@property (assign, nonatomic) CATransform3D initialTransformation;
+
+
 @end
 
 @implementation MainServiceViewController
@@ -31,20 +34,16 @@ CGFloat cell_size = 0;
         {
             preview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Balance PreView"]];
             preview.frame =CGRectMake(0, yOrigin, self.view.frame.size.width, 220);
-            
         }
         else if (i%3 == 1)
         {
             preview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WireTRansfer Preview 2"]];
             preview.frame =CGRectMake(0, yOrigin, self.view.frame.size.width, 220);
-            
-
         }
         else
         {
             preview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Card Preview"]];
             preview.frame =CGRectMake(0, yOrigin, self.view.frame.size.width, 220);
-
         }
         
         [_mainDetailedView addSubview:preview];
@@ -65,6 +64,16 @@ CGFloat cell_size = 0;
     tableData = [NSArray arrayWithObjects:@"Account", @"Transfers", @"Credit Cards", nil];
     
     self.title = @"Services";
+    
+    
+    CGFloat rotationAngleDegrees = -15;
+    CGFloat rotationAngleRadians = rotationAngleDegrees * (M_PI/180);
+    CGPoint offsetPositioning = CGPointMake(-20, -20);
+    
+    CATransform3D transform = CATransform3DIdentity;
+    transform = CATransform3DRotate(transform, rotationAngleRadians, 0.0, 0.0, 1.0);
+    transform = CATransform3DTranslate(transform, offsetPositioning.x, offsetPositioning.y, 0.0);
+    _initialTransformation = transform;
     
     
 }
@@ -91,6 +100,7 @@ CGFloat cell_size = 0;
 - (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self scrollViewDidScroll:_mainServicesList];
+    
 }
 
 
@@ -125,25 +135,6 @@ CGFloat cell_size = 0;
     {
     CGFloat actualPosition = scrollView_.contentOffset.y;
     CGFloat contentHeight = scrollView_.contentSize.height - ([tableData count]);
-        
-        
-        for (UITableViewCell *cell in _mainServicesList.visibleCells)
-                             {
-                                 if (cell.frame.origin.y< _mainServicesList.bounds.origin.y+cell_size*0.20)
-                                 {
-                                     
-                                     cell.textLabel.textColor = [UIColor blackColor];
-                                     cell.textLabel.font = [UIFont boldSystemFontOfSize:25];
-                                 }
-                                 else
-                                 {
-                                     cell.textLabel.textColor = [UIColor blackColor];
-                                     cell.textLabel.font = [UIFont systemFontOfSize:20];
-                                 }
-                            
-                             }
-    
-         
         
         
          

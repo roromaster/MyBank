@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioServices.h>
 
 @interface MyPinAuthViewController : UIViewController <UIViewControllerAnimatedTransitioning>
 @property (weak, nonatomic) IBOutlet UIButton *pinButton1x1;

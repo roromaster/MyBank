@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		94051CC819994D020070A485 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94051CC719994D020070A485 /* Crashlytics.framework */; };
+		942EB40919A788FC00CE9759 /* customSegPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 942EB40819A788FC00CE9759 /* customSegPop.m */; };
 		9430F4971999832D0058B043 /* PinPad Pad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9430F4961999832D0058B043 /* PinPad Pad.png */; };
 		944DA22D19A171CB009840BF /* Card Preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 944DA22C19A171CB009840BF /* Card Preview.png */; };
 		944DA23019A2366F009840BF /* AccountDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944DA22F19A2366F009840BF /* AccountDetailsViewController.m */; };
@@ -26,7 +27,6 @@
 		94ACEF1D1997C793003B7244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94ACEF1B1997C793003B7244 /* Main.storyboard */; };
 		94ACEF201997C793003B7244 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94ACEF1F1997C793003B7244 /* ViewController.m */; };
 		94ACEF221997C793003B7244 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94ACEF211997C793003B7244 /* Images.xcassets */; };
-		94ACEF291997C793003B7244 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ACEF281997C793003B7244 /* XCTest.framework */; };
 		94ACEF2A1997C793003B7244 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ACEF091997C793003B7244 /* Foundation.framework */; };
 		94ACEF2B1997C793003B7244 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ACEF0D1997C793003B7244 /* UIKit.framework */; };
 		94ACEF331997C793003B7244 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94ACEF311997C793003B7244 /* InfoPlist.strings */; };
@@ -50,6 +50,7 @@
 		94FAB29D1997E3080087263F /* AccountOpeningPresentation3.png in Resources */ = {isa = PBXBuildFile; fileRef = 94FAB2991997E3080087263F /* AccountOpeningPresentation3.png */; };
 		94FAB29E1997E3080087263F /* AccountOpeningPresentation4.png in Resources */ = {isa = PBXBuildFile; fileRef = 94FAB29A1997E3080087263F /* AccountOpeningPresentation4.png */; };
 		94FAB2A1199801920087263F /* OpenAccountRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FAB2A0199801920087263F /* OpenAccountRootViewController.m */; };
+		DE034CB616A7490A9DEF8BBE /* libPods-eTIS-Bank.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A47CD61E9B094580BDB94D6B /* libPods-eTIS-Bank.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +64,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D8BAFE6402F47C091490945 /* Pods-eTIS-Bank.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eTIS-Bank.xcconfig"; path = "Pods/Pods-eTIS-Bank.xcconfig"; sourceTree = "<group>"; };
 		94051CC719994D020070A485 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		942EB40719A788FC00CE9759 /* customSegPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customSegPop.h; sourceTree = "<group>"; };
+		942EB40819A788FC00CE9759 /* customSegPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customSegPop.m; sourceTree = "<group>"; };
 		9430F4961999832D0058B043 /* PinPad Pad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PinPad Pad.png"; sourceTree = "<group>"; };
 		944DA22C19A171CB009840BF /* Card Preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card Preview.png"; sourceTree = "<group>"; };
 		944DA22E19A2366F009840BF /* AccountDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountDetailsViewController.h; sourceTree = "<group>"; };
@@ -90,7 +94,6 @@
 		94ACEF1F1997C793003B7244 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		94ACEF211997C793003B7244 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		94ACEF271997C793003B7244 /* eTIS-BankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "eTIS-BankTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		94ACEF281997C793003B7244 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		94ACEF301997C793003B7244 /* eTIS-BankTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "eTIS-BankTests-Info.plist"; sourceTree = "<group>"; };
 		94ACEF321997C793003B7244 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		94ACEF341997C793003B7244 /* eTIS_BankTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eTIS_BankTests.m; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 		94FAB29A1997E3080087263F /* AccountOpeningPresentation4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AccountOpeningPresentation4.png; sourceTree = "<group>"; };
 		94FAB29F199801920087263F /* OpenAccountRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenAccountRootViewController.h; sourceTree = "<group>"; };
 		94FAB2A0199801920087263F /* OpenAccountRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenAccountRootViewController.m; sourceTree = "<group>"; };
+		A47CD61E9B094580BDB94D6B /* libPods-eTIS-Bank.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eTIS-Bank.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 				94ACEF0C1997C793003B7244 /* CoreGraphics.framework in Frameworks */,
 				94ACEF0E1997C793003B7244 /* UIKit.framework in Frameworks */,
 				94ACEF0A1997C793003B7244 /* Foundation.framework in Frameworks */,
+				DE034CB616A7490A9DEF8BBE /* libPods-eTIS-Bank.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +141,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94ACEF291997C793003B7244 /* XCTest.framework in Frameworks */,
 				94ACEF2B1997C793003B7244 /* UIKit.framework in Frameworks */,
 				94ACEF2A1997C793003B7244 /* Foundation.framework in Frameworks */,
 			);
@@ -152,6 +156,7 @@
 				94ACEF2E1997C793003B7244 /* eTIS-BankTests */,
 				94ACEF081997C793003B7244 /* Frameworks */,
 				94ACEF071997C793003B7244 /* Products */,
+				3D8BAFE6402F47C091490945 /* Pods-eTIS-Bank.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,7 +176,7 @@
 				94ACEF091997C793003B7244 /* Foundation.framework */,
 				94ACEF0B1997C793003B7244 /* CoreGraphics.framework */,
 				94ACEF0D1997C793003B7244 /* UIKit.framework */,
-				94ACEF281997C793003B7244 /* XCTest.framework */,
+				A47CD61E9B094580BDB94D6B /* libPods-eTIS-Bank.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -181,23 +186,17 @@
 			children = (
 				94ACEF181997C793003B7244 /* AppDelegate.h */,
 				94ACEF191997C793003B7244 /* AppDelegate.m */,
+				942EB40719A788FC00CE9759 /* customSegPop.h */,
+				942EB40819A788FC00CE9759 /* customSegPop.m */,
 				94ACEF1E1997C793003B7244 /* ViewController.h */,
 				94ACEF1F1997C793003B7244 /* ViewController.m */,
 				94ACEF1B1997C793003B7244 /* Main.storyboard */,
 				944DA22E19A2366F009840BF /* AccountDetailsViewController.h */,
 				944DA22F19A2366F009840BF /* AccountDetailsViewController.m */,
-				94FAB29F199801920087263F /* OpenAccountRootViewController.h */,
-				94FAB2A0199801920087263F /* OpenAccountRootViewController.m */,
 				94A5EC37199F8D1C00402CE3 /* MainServiceViewController.h */,
 				94A5EC38199F8D1C00402CE3 /* MainServiceViewController.m */,
-				94C958C2199B8431007D6238 /* MyFaceAuthViewController.h */,
-				94C958C3199B8431007D6238 /* MyFaceAuthViewController.m */,
-				94C958BF199B83FB007D6238 /* MyPinAuthViewController.h */,
-				94C958C0199B83FB007D6238 /* MyPinAuthViewController.m */,
-				94C958BC199B8346007D6238 /* MyAuthSelectorViewController.h */,
-				94C958BD199B8346007D6238 /* MyAuthSelectorViewController.m */,
-				94FAB2911997DBFB0087263F /* OpenAccountPresentationViewController.h */,
-				94FAB2921997DBFB0087263F /* OpenAccountPresentationViewController.m */,
+				94F1F19419A67F370050D6D2 /* Authentication Views */,
+				94F1F19519A67F570050D6D2 /* Open Account Views */,
 				94ACEF211997C793003B7244 /* Images.xcassets */,
 				94ACEF101997C793003B7244 /* Supporting Files */,
 			);
@@ -254,6 +253,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		94F1F19419A67F370050D6D2 /* Authentication Views */ = {
+			isa = PBXGroup;
+			children = (
+				94C958C2199B8431007D6238 /* MyFaceAuthViewController.h */,
+				94C958C3199B8431007D6238 /* MyFaceAuthViewController.m */,
+				94C958BF199B83FB007D6238 /* MyPinAuthViewController.h */,
+				94C958C0199B83FB007D6238 /* MyPinAuthViewController.m */,
+				94C958BC199B8346007D6238 /* MyAuthSelectorViewController.h */,
+				94C958BD199B8346007D6238 /* MyAuthSelectorViewController.m */,
+			);
+			name = "Authentication Views";
+			sourceTree = "<group>";
+		};
+		94F1F19519A67F570050D6D2 /* Open Account Views */ = {
+			isa = PBXGroup;
+			children = (
+				94FAB29F199801920087263F /* OpenAccountRootViewController.h */,
+				94FAB2A0199801920087263F /* OpenAccountRootViewController.m */,
+				94FAB2911997DBFB0087263F /* OpenAccountPresentationViewController.h */,
+				94FAB2921997DBFB0087263F /* OpenAccountPresentationViewController.m */,
+			);
+			name = "Open Account Views";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,10 +284,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94ACEF381997C793003B7244 /* Build configuration list for PBXNativeTarget "eTIS-Bank" */;
 			buildPhases = (
+				6EDEF370CE604BB787D8156F /* Check Pods Manifest.lock */,
 				94ACEF021997C793003B7244 /* Sources */,
 				94ACEF031997C793003B7244 /* Frameworks */,
 				94ACEF041997C793003B7244 /* Resources */,
 				94051CC619994CCB0070A485 /* ShellScript */,
+				79729908F2A54C04B9D19FD9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,6 +397,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6EDEF370CE604BB787D8156F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		79729908F2A54C04B9D19FD9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-eTIS-Bank-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		94051CC619994CCB0070A485 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -397,6 +452,7 @@
 				944DA23019A2366F009840BF /* AccountDetailsViewController.m in Sources */,
 				94ACEF201997C793003B7244 /* ViewController.m in Sources */,
 				94ACEF1A1997C793003B7244 /* AppDelegate.m in Sources */,
+				942EB40919A788FC00CE9759 /* customSegPop.m in Sources */,
 				94C958C4199B8431007D6238 /* MyFaceAuthViewController.m in Sources */,
 				94C958C1199B83FB007D6238 /* MyPinAuthViewController.m in Sources */,
 				94C958BE199B8346007D6238 /* MyAuthSelectorViewController.m in Sources */,
@@ -467,7 +523,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rodolphe Hugel (5UCXC647TA)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -505,7 +561,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rodolphe Hugel (5UCXC647TA)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -524,10 +580,11 @@
 		};
 		94ACEF391997C793003B7244 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D8BAFE6402F47C091490945 /* Pods-eTIS-Bank.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rodolphe Hugel (5UCXC647TA)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -545,10 +602,11 @@
 		};
 		94ACEF3A1997C793003B7244 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D8BAFE6402F47C091490945 /* Pods-eTIS-Bank.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rodolphe Hugel (5UCXC647TA)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
