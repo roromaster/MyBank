@@ -10,7 +10,9 @@
 
 @interface ViewController : UIViewController<UINavigationControllerDelegate,UINavigationBarDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *settingsButton;
 
+- (IBAction)settingPushed:(UIButton *)sender;
 
 @end
 UINavigationController *navigationController;

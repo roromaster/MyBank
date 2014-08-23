@@ -14,6 +14,16 @@
 		944DA23019A2366F009840BF /* AccountDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944DA22F19A2366F009840BF /* AccountDetailsViewController.m */; };
 		944DA23219A24C11009840BF /* NavigationBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 944DA23119A24C11009840BF /* NavigationBar.png */; };
 		944FF19B199EA8A200EA07BA /* Scanning Line.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FF19A199EA8A200EA07BA /* Scanning Line.png */; };
+		947FBA8C19A7B28E004F0E9D /* logo-fnac.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBA8B19A7B28E004F0E9D /* logo-fnac.png */; };
+		947FBA9219A7C06E004F0E9D /* Blue_Morpho_Butterfly_by_pyrotaku.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBA8D19A7C06E004F0E9D /* Blue_Morpho_Butterfly_by_pyrotaku.png */; };
+		947FBA9319A7C06E004F0E9D /* bank-of-america-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBA8E19A7C06E004F0E9D /* bank-of-america-logo.png */; };
+		947FBA9419A7C06E004F0E9D /* amazon.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBA8F19A7C06E004F0E9D /* amazon.png */; };
+		947FBA9519A7C06E004F0E9D /* Logo_Edf.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBA9019A7C06E004F0E9D /* Logo_Edf.png */; };
+		947FBA9619A7C06E004F0E9D /* morpho-logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 947FBA9119A7C06E004F0E9D /* morpho-logo.jpeg */; };
+		947FBA9A19A7D1F6004F0E9D /* blue-morpho1.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBA9719A7D1F6004F0E9D /* blue-morpho1.png */; };
+		947FBA9B19A7D1F7004F0E9D /* blue-morpho2.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBA9819A7D1F6004F0E9D /* blue-morpho2.png */; };
+		947FBA9C19A7D1F7004F0E9D /* blue-morpho3.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBA9919A7D1F6004F0E9D /* blue-morpho3.png */; };
+		947FBA9F19A802F3004F0E9D /* settingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 947FBA9E19A802F3004F0E9D /* settingsVC.m */; };
 		94A5EC39199F8D1C00402CE3 /* MainServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A5EC38199F8D1C00402CE3 /* MainServiceViewController.m */; };
 		94A5EC3C199F9D4E00402CE3 /* Balance PreView.png in Resources */ = {isa = PBXBuildFile; fileRef = 94A5EC3A199F9D4E00402CE3 /* Balance PreView.png */; };
 		94A5EC3D199F9D4E00402CE3 /* WireTRansfer Preview 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 94A5EC3B199F9D4E00402CE3 /* WireTRansfer Preview 2.png */; };
@@ -74,6 +84,17 @@
 		944DA22F19A2366F009840BF /* AccountDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDetailsViewController.m; sourceTree = "<group>"; };
 		944DA23119A24C11009840BF /* NavigationBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationBar.png; sourceTree = "<group>"; };
 		944FF19A199EA8A200EA07BA /* Scanning Line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scanning Line.png"; sourceTree = "<group>"; };
+		947FBA8B19A7B28E004F0E9D /* logo-fnac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-fnac.png"; sourceTree = "<group>"; };
+		947FBA8D19A7C06E004F0E9D /* Blue_Morpho_Butterfly_by_pyrotaku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue_Morpho_Butterfly_by_pyrotaku.png; sourceTree = "<group>"; };
+		947FBA8E19A7C06E004F0E9D /* bank-of-america-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bank-of-america-logo.png"; sourceTree = "<group>"; };
+		947FBA8F19A7C06E004F0E9D /* amazon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amazon.png; sourceTree = "<group>"; };
+		947FBA9019A7C06E004F0E9D /* Logo_Edf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_Edf.png; sourceTree = "<group>"; };
+		947FBA9119A7C06E004F0E9D /* morpho-logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "morpho-logo.jpeg"; sourceTree = "<group>"; };
+		947FBA9719A7D1F6004F0E9D /* blue-morpho1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-morpho1.png"; sourceTree = "<group>"; };
+		947FBA9819A7D1F6004F0E9D /* blue-morpho2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-morpho2.png"; sourceTree = "<group>"; };
+		947FBA9919A7D1F6004F0E9D /* blue-morpho3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-morpho3.png"; sourceTree = "<group>"; };
+		947FBA9D19A802F3004F0E9D /* settingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsVC.h; sourceTree = "<group>"; };
+		947FBA9E19A802F3004F0E9D /* settingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsVC.m; sourceTree = "<group>"; };
 		94A5EC37199F8D1C00402CE3 /* MainServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainServiceViewController.h; sourceTree = "<group>"; };
 		94A5EC38199F8D1C00402CE3 /* MainServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainServiceViewController.m; sourceTree = "<group>"; };
 		94A5EC3A199F9D4E00402CE3 /* Balance PreView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Balance PreView.png"; sourceTree = "<group>"; };
@@ -195,6 +216,8 @@
 				944DA22F19A2366F009840BF /* AccountDetailsViewController.m */,
 				94A5EC37199F8D1C00402CE3 /* MainServiceViewController.h */,
 				94A5EC38199F8D1C00402CE3 /* MainServiceViewController.m */,
+				947FBA9D19A802F3004F0E9D /* settingsVC.h */,
+				947FBA9E19A802F3004F0E9D /* settingsVC.m */,
 				94F1F19419A67F370050D6D2 /* Authentication Views */,
 				94F1F19519A67F570050D6D2 /* Open Account Views */,
 				94ACEF211997C793003B7244 /* Images.xcassets */,
@@ -206,8 +229,17 @@
 		94ACEF101997C793003B7244 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				947FBA9719A7D1F6004F0E9D /* blue-morpho1.png */,
+				947FBA9819A7D1F6004F0E9D /* blue-morpho2.png */,
+				947FBA9919A7D1F6004F0E9D /* blue-morpho3.png */,
 				944DA23119A24C11009840BF /* NavigationBar.png */,
 				944DA22C19A171CB009840BF /* Card Preview.png */,
+				947FBA8D19A7C06E004F0E9D /* Blue_Morpho_Butterfly_by_pyrotaku.png */,
+				947FBA8E19A7C06E004F0E9D /* bank-of-america-logo.png */,
+				947FBA8F19A7C06E004F0E9D /* amazon.png */,
+				947FBA9019A7C06E004F0E9D /* Logo_Edf.png */,
+				947FBA9119A7C06E004F0E9D /* morpho-logo.jpeg */,
+				947FBA8B19A7B28E004F0E9D /* logo-fnac.png */,
 				944FF19A199EA8A200EA07BA /* Scanning Line.png */,
 				94FAB2971997E3080087263F /* AccountOpeningPresentation1.png */,
 				94FAB2981997E3080087263F /* AccountOpeningPresentation2.png */,
@@ -359,6 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947FBA9219A7C06E004F0E9D /* Blue_Morpho_Butterfly_by_pyrotaku.png in Resources */,
 				94A5EC3D199F9D4E00402CE3 /* WireTRansfer Preview 2.png in Resources */,
 				94FAB29B1997E3080087263F /* AccountOpeningPresentation1.png in Resources */,
 				94FAB29C1997E3080087263F /* AccountOpeningPresentation2.png in Resources */,
@@ -369,20 +402,28 @@
 				94FAB28D1997CA740087263F /* Background + Rectangle 7 + Your Bank.png in Resources */,
 				94ACEF221997C793003B7244 /* Images.xcassets in Resources */,
 				944DA23219A24C11009840BF /* NavigationBar.png in Resources */,
+				947FBA9419A7C06E004F0E9D /* amazon.png in Resources */,
 				94A5EC3C199F9D4E00402CE3 /* Balance PreView.png in Resources */,
+				947FBA9319A7C06E004F0E9D /* bank-of-america-logo.png in Resources */,
+				947FBA8C19A7B28E004F0E9D /* logo-fnac.png in Resources */,
 				94C958B7199AD8BE007D6238 /* Backspace Icon.png in Resources */,
 				94FAB2881997C8200087263F /* eTIS-Bank App Icon.png in Resources */,
 				9430F4971999832D0058B043 /* PinPad Pad.png in Resources */,
 				94C958B9199AD8BE007D6238 /* Pin Pad Icon.png in Resources */,
+				947FBA9619A7C06E004F0E9D /* morpho-logo.jpeg in Resources */,
+				947FBA9C19A7D1F7004F0E9D /* blue-morpho3.png in Resources */,
+				947FBA9A19A7D1F6004F0E9D /* blue-morpho1.png in Resources */,
 				94C958C6199BB4DD007D6238 /* FaceOverlay.png in Resources */,
 				94FAB28E1997CA740087263F /* Line.png in Resources */,
 				94FAB2901997CA740087263F /* Open Account Button.png in Resources */,
 				94ACEF141997C793003B7244 /* InfoPlist.strings in Resources */,
 				94ACEF1D1997C793003B7244 /* Main.storyboard in Resources */,
 				94FAB29D1997E3080087263F /* AccountOpeningPresentation3.png in Resources */,
+				947FBA9519A7C06E004F0E9D /* Logo_Edf.png in Resources */,
 				94C958C8199BB7E0007D6238 /* FaceOverlayDetected.png in Resources */,
 				94FAB29E1997E3080087263F /* AccountOpeningPresentation4.png in Resources */,
 				94C958B8199AD8BE007D6238 /* Login Background.png in Resources */,
+				947FBA9B19A7D1F7004F0E9D /* blue-morpho2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +497,7 @@
 				94C958C4199B8431007D6238 /* MyFaceAuthViewController.m in Sources */,
 				94C958C1199B83FB007D6238 /* MyPinAuthViewController.m in Sources */,
 				94C958BE199B8346007D6238 /* MyAuthSelectorViewController.m in Sources */,
+				947FBA9F19A802F3004F0E9D /* settingsVC.m in Sources */,
 				94ACEF161997C793003B7244 /* main.m in Sources */,
 				94FAB2A1199801920087263F /* OpenAccountRootViewController.m in Sources */,
 			);

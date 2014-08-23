@@ -17,9 +17,8 @@
 
 @implementation MainServiceViewController
 
- NSArray *tableData;
+NSArray *tableData;
 CGFloat cell_size = 0;
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -75,8 +74,7 @@ CGFloat cell_size = 0;
     transform = CATransform3DTranslate(transform, offsetPositioning.x, offsetPositioning.y, 0.0);
     _initialTransformation = transform;
     
-    
-}
+   }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

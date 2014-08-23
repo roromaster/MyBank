@@ -12,16 +12,43 @@
 
 @end
 
+
+NSArray *transactionList;
+
 @implementation AccountDetailsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    transactionList = @[
+                        @[ @"01/01/14", @"FNAC.COM", @"+120.49 €",@"logo-fnac.png" ],
+                        @[ @"01/02/14", @"Amazon SA", @"+120.49 €" ,@"amazon.png"],
+                        @[ @"01/03/14", @"EDF", @"-160 €",@"Logo_Edf.png" ],
+                        @[ @"01/04/14", @"Bank of America SubPrime", @"-34 120.49 €",@"bank-of-america-logo.png" ],
+                        @[ @"01/05/14", @"Morpho", @"+5 680 €",@"morpho-logo.jpeg" ],
+                        @[ @"01/01/14", @"FNAC.COM", @"+120.49 €",@"logo-fnac.png" ],
+                        @[ @"01/02/14", @"Amazon SA", @"+120.49 €" ,@"amazon.png"],
+                        @[ @"01/03/14", @"EDF", @"-160 €",@"Logo_Edf.png" ],
+                        @[ @"01/04/14", @"Bank of America SubPrime", @"-34 120.49 €",@"bank-of-america-logo.png" ],
+                        @[ @"01/05/14", @"Morpho", @"+5 680 €",@"morpho-logo.jpeg" ],
+                        @[ @"01/01/14", @"FNAC.COM", @"+120.49 €",@"logo-fnac.png" ],
+                        @[ @"01/02/14", @"Amazon SA", @"+120.49 €" ,@"amazon.png"],
+                        @[ @"01/03/14", @"EDF", @"-160 €",@"Logo_Edf.png" ],
+                        @[ @"01/04/14", @"Bank of America SubPrime", @"-34 120.49 €",@"bank-of-america-logo.png" ],
+                        @[ @"01/05/14", @"Morpho", @"+5 680 €",@"morpho-logo.jpeg" ],
+                        @[ @"01/01/14", @"FNAC.COM", @"+120.49 €",@"logo-fnac.png" ],
+                        @[ @"01/02/14", @"Amazon SA", @"+120.49 €" ,@"amazon.png"],
+                        @[ @"01/03/14", @"EDF", @"-160 €",@"Logo_Edf.png" ],
+                        @[ @"01/04/14", @"Bank of America SubPrime", @"-34 120.49 €",@"bank-of-america-logo.png" ],
+                        @[ @"01/05/14", @"Morpho", @"+5 680 €",@"morpho-logo.jpeg" ],
+
+];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,26 +59,88 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [transactionList count];
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell ;
     
-    // Configure the cell...
+    if (indexPath.row % 2)
+        cell = [tableView dequeueReusableCellWithIdentifier:@"OperationDetail1"];
+    else
+         cell = [tableView dequeueReusableCellWithIdentifier:@"OperationDetail2"];
+    
+    // Configure Cell
+    UILabel *date = (UILabel *)[cell.contentView viewWithTag:1];
+    UILabel *operationLabel = (UILabel *)[cell.contentView viewWithTag:2];
+    UILabel *operationAmount = (UILabel *)[cell.contentView viewWithTag:3];
+    
+    NSString *dateString = [[transactionList objectAtIndex:indexPath.row] objectAtIndex:0];
+    NSString *operationString = [[transactionList objectAtIndex:indexPath.row] objectAtIndex:1];
+    NSString *amountString = [[transactionList objectAtIndex:indexPath.row] objectAtIndex:2];
+   
+    if ([amountString hasPrefix:@"-"])
+        [operationAmount setTextColor:[UIColor redColor]];
+    else
+      [operationAmount setTextColor:[[UIColor alloc] initWithRed:0.2 green:0.8 blue:0.2 alpha:1]];
+    
+    date.text = dateString;
+    operationLabel.text = operationString;
+    operationAmount.text = amountString;
+    
     
     return cell;
 }
-*/
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Configure Cell
+
+    
+    NSString *dateString = [[transactionList objectAtIndex:indexPath.row] objectAtIndex:0];
+    NSString *operationString = [[transactionList objectAtIndex:indexPath.row] objectAtIndex:1];
+    NSString *amountString = [[transactionList objectAtIndex:indexPath.row] objectAtIndex:2];
+    NSString *operationImageString =[[transactionList objectAtIndex:indexPath.row] objectAtIndex:3];
+    
+    
+    if ([amountString hasPrefix:@"-"])
+        [_operationDetailAmount setTextColor:[UIColor redColor]];
+    else
+        [_operationDetailAmount setTextColor:[UIColor greenColor]];
+    
+    _operationDetailsDate.text = dateString;
+    _operationDetailLabel.text = operationString;
+    _operationDetailAmount.text = amountString;
+    _operationDetailImage.image = [UIImage imageNamed:operationImageString];
+    
+    
+    CALayer *layer = _operationDetailsView.layer;
+    [layer pop_removeAllAnimations];
+    
+    POPSpringAnimation *xAnim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
+    POPSpringAnimation *sizeAnim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerSize];
+    
+    xAnim.fromValue = @(320);
+    xAnim.springBounciness = 15;
+    xAnim.springSpeed = 10;
+    
+    sizeAnim.fromValue = [NSValue valueWithCGSize:CGSizeMake(64, 114)];
+    
+    xAnim.completionBlock = ^(POPAnimation *anim, BOOL finished) {
+        NSLog(@"Working");
+    };
+    
+    [layer pop_addAnimation:xAnim forKey:@"position"];
+    [layer pop_addAnimation:sizeAnim forKey:@"size"];
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
