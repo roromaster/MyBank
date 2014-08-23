@@ -62,6 +62,18 @@ NSArray *section_list;
     
 }
 
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath: (NSIndexPath*)indexPath
+{
+   if (indexPath.section != 1) {
+        return 44;
+    }
+   else if (indexPath.section == 1 & indexPath.row == 1) {
+        return 100;
+    }
+    else
+        return 44;
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
@@ -82,20 +94,48 @@ NSArray *section_list;
     
 }
 
+- (void) togglePIN:(UISwitch*)sender {
+    [[NSUserDefaults standardUserDefaults]
+     setBool:sender.on forKey:@"PIN"];
+}
+
+- (void) toggleFace:(UISwitch*)sender {
+    [[NSUserDefaults standardUserDefaults]
+     setBool:sender.on forKey:@"FACE"];
+}
+
+- (void) toggleFingerprint:(UISwitch*)sender {
+    [[NSUserDefaults standardUserDefaults]
+     setBool:sender.on forKey:@"FINGERPRINT"];
+}
+
+- (void) toggleTouchID:(UISwitch*)sender {
+    [[NSUserDefaults standardUserDefaults]
+     setBool:sender.on forKey:@"TOUCHID"];
+}
+
+- (void) toggleOnline:(UISwitch*)sender {
+    [[NSUserDefaults standardUserDefaults]
+     setBool:sender.on forKey:@"ONLINE"];
+}
+
+- (void) updateURL: (UITextField*)sender{
+    [[NSUserDefaults standardUserDefaults]
+     setValue:sender.text forKey:@"SERVICE_URL"];
+    
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell;
-    
-    cell = [tableView dequeueReusableCellWithIdentifier:@"option-on-off" forIndexPath:indexPath];
-    
+    UITableViewCell *cell=nil;
     
     switch (indexPath.section) {
         case 0:
         {
             //Active Auth Section
      
-    //        cell = [tableView dequeueReusableCellWithIdentifier:@"option-on-off" forIndexPath:indexPath];
+            cell = [tableView dequeueReusableCellWithIdentifier:@"option-on-off" forIndexPath:indexPath];
             
             // Configure Cell
             UILabel *label = (UILabel *)[cell.contentView viewWithTag:1];
@@ -104,13 +144,18 @@ NSArray *section_list;
             switch (indexPath.row) {
                 case 0:
                     label.text = @"PIN";
-                    
+                    [switch_option addTarget:self action:@selector(togglePIN:) forControlEvents:UIControlEventValueChanged];
+                    switch_option.on = [[NSUserDefaults standardUserDefaults] boolForKey:
+                                   @"PIN"];
                     break;
                     
                 case 1:
                     
                     label.text = @"Face";
-                    
+                    [switch_option addTarget:self action:@selector(toggleFace:) forControlEvents:UIControlEventValueChanged];
+                    switch_option.on = [[NSUserDefaults standardUserDefaults] boolForKey:
+                                        @"FACE"];
+
                     
                     break;
                     
@@ -118,14 +163,24 @@ NSArray *section_list;
                 case 2:
                     
                     label.text = @"Fingerprint";
+                    [switch_option addTarget:self action:@selector(toggleFingerprint:) forControlEvents:UIControlEventValueChanged];
+                    switch_option.on = [[NSUserDefaults standardUserDefaults] boolForKey:
+                                        @"FINGERPRINT"];
                     
+
                     break;
                     
                 case 3:
                     
                     label.text = @"TouchID";
-                    break;
+                  
+                    [switch_option addTarget:self action:@selector(toggleTouchID:) forControlEvents:UIControlEventValueChanged];
+                    switch_option.on = [[NSUserDefaults standardUserDefaults] boolForKey:
+                                        @"TOUCHID"];
                     
+                      break;
+                    
+
                     default:
                     cell = nil;
                     break;
@@ -134,10 +189,45 @@ NSArray *section_list;
             break;
         }
             
+        case 1:
+        {
+            
+            switch (indexPath.row) {
+                case 0:
+                {
+    
+                    cell = [tableView dequeueReusableCellWithIdentifier:@"option-on-off" forIndexPath:indexPath];
+                    UILabel *label = (UILabel *)[cell.contentView viewWithTag:1];
+                    UISwitch *switch_option = (UISwitch *)[cell.contentView viewWithTag:2];
+                    label.text = @"Online mode";
+                    [switch_option addTarget:self action:@selector(toggleOnline:) forControlEvents:UIControlEventValueChanged];
+                    switch_option.on = [[NSUserDefaults standardUserDefaults] boolForKey:
+                                        @"ONLINE"];
+                    break;
+                }
+                    
+                case 1:
+                {
+                    cell = [tableView dequeueReusableCellWithIdentifier:@"enter-url" forIndexPath:indexPath];
+                    UILabel *label = (UILabel *)[cell.contentView viewWithTag:1];
+                    UITextField *url = (UITextField *)[cell.contentView viewWithTag:2];
+                    label.text = @"Server URL";
+                    [url addTarget:self action:@selector(updateURL:) forControlEvents:UIControlEventValueChanged];
+                    url.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"SERVICE_URL"];
+                    break;
+                }
+            }
+            
+        }
+            
         default:
             break;
     }
     // Configure the cell...
+    
+    if (cell == nil)
+        cell = [tableView dequeueReusableCellWithIdentifier:@"option-on-off" forIndexPath:indexPath];
+    
     
     return cell;
 }
