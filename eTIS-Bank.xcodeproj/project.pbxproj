@@ -31,6 +31,8 @@
 		947FBAAB19A8B8A3004F0E9D /* iphone-touch-id-logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBAAA19A8B8A3004F0E9D /* iphone-touch-id-logo2.png */; };
 		947FBAAE19A8C9FA004F0E9D /* Hand Guide ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBAAC19A8C9FA004F0E9D /* Hand Guide ok.png */; };
 		947FBAAF19A8C9FA004F0E9D /* Hand Guide.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBAAD19A8C9FA004F0E9D /* Hand Guide.png */; };
+		947FBAB219A91BEC004F0E9D /* faceRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 947FBAB119A91BEC004F0E9D /* faceRegisterVC.m */; };
+		947FBAB619A91C1D004F0E9D /* pinRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 947FBAB519A91C1D004F0E9D /* pinRegisterVC.m */; };
 		94A5EC39199F8D1C00402CE3 /* MainServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A5EC38199F8D1C00402CE3 /* MainServiceViewController.m */; };
 		94A5EC3C199F9D4E00402CE3 /* Balance PreView.png in Resources */ = {isa = PBXBuildFile; fileRef = 94A5EC3A199F9D4E00402CE3 /* Balance PreView.png */; };
 		94A5EC3D199F9D4E00402CE3 /* WireTRansfer Preview 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 94A5EC3B199F9D4E00402CE3 /* WireTRansfer Preview 2.png */; };
@@ -111,6 +113,10 @@
 		947FBAAA19A8B8A3004F0E9D /* iphone-touch-id-logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-touch-id-logo2.png"; sourceTree = "<group>"; };
 		947FBAAC19A8C9FA004F0E9D /* Hand Guide ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hand Guide ok.png"; sourceTree = "<group>"; };
 		947FBAAD19A8C9FA004F0E9D /* Hand Guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hand Guide.png"; sourceTree = "<group>"; };
+		947FBAB019A91BEC004F0E9D /* faceRegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = faceRegisterVC.h; sourceTree = "<group>"; };
+		947FBAB119A91BEC004F0E9D /* faceRegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = faceRegisterVC.m; sourceTree = "<group>"; };
+		947FBAB419A91C1D004F0E9D /* pinRegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinRegisterVC.h; sourceTree = "<group>"; };
+		947FBAB519A91C1D004F0E9D /* pinRegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pinRegisterVC.m; sourceTree = "<group>"; };
 		94A5EC37199F8D1C00402CE3 /* MainServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainServiceViewController.h; sourceTree = "<group>"; };
 		94A5EC38199F8D1C00402CE3 /* MainServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainServiceViewController.m; sourceTree = "<group>"; };
 		94A5EC3A199F9D4E00402CE3 /* Balance PreView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Balance PreView.png"; sourceTree = "<group>"; };
@@ -186,6 +192,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		947FBAB319A91BF7004F0E9D /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				947FBAB019A91BEC004F0E9D /* faceRegisterVC.h */,
+				947FBAB119A91BEC004F0E9D /* faceRegisterVC.m */,
+				947FBAB419A91C1D004F0E9D /* pinRegisterVC.h */,
+				947FBAB519A91C1D004F0E9D /* pinRegisterVC.m */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
 		94ACEEFD1997C793003B7244 = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +252,7 @@
 				94A5EC38199F8D1C00402CE3 /* MainServiceViewController.m */,
 				947FBA9D19A802F3004F0E9D /* settingsVC.h */,
 				947FBA9E19A802F3004F0E9D /* settingsVC.m */,
+				947FBAB319A91BF7004F0E9D /* Register */,
 				94F1F19419A67F370050D6D2 /* Authentication Views */,
 				94F1F19519A67F570050D6D2 /* Open Account Views */,
 				94ACEF211997C793003B7244 /* Images.xcassets */,
@@ -529,9 +547,11 @@
 				94C958C4199B8431007D6238 /* MyFaceAuthViewController.m in Sources */,
 				94C958C1199B83FB007D6238 /* MyPinAuthViewController.m in Sources */,
 				94C958BE199B8346007D6238 /* MyAuthSelectorViewController.m in Sources */,
+				947FBAB219A91BEC004F0E9D /* faceRegisterVC.m in Sources */,
 				947FBA9F19A802F3004F0E9D /* settingsVC.m in Sources */,
 				94ACEF161997C793003B7244 /* main.m in Sources */,
 				94FAB2A1199801920087263F /* OpenAccountRootViewController.m in Sources */,
+				947FBAB619A91C1D004F0E9D /* pinRegisterVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
