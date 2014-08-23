@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329r" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jwG-2f-qoe">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
@@ -466,6 +467,81 @@
             </objects>
             <point key="canvasLocation" x="2326" y="-1502"/>
         </scene>
+        <!--My TouchID AuthVC-->
+        <scene sceneID="3bt-vR-Bfj">
+            <objects>
+                <viewController storyboardIdentifier="touchIDAuth" id="DR6-4Z-RXm" customClass="MyTouchIDAuthVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mfn-st-2bd"/>
+                        <viewControllerLayoutGuide type="bottom" id="LpI-tI-oIe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FqE-Mo-Jh0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Place your finger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7P-UW-OSx">
+                                <rect key="frame" x="63" y="130" width="195" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GNZ-XK-JMY">
+                                <rect key="frame" x="0.0" y="135" width="320" height="320"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iphone-touch-id-logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="312-D8-fun">
+                                        <rect key="frame" x="0.0" y="62" width="320" height="250"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="touchIDImage" destination="312-D8-fun" id="5ZJ-uD-0Me"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VXp-a7-Pqi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="-1502"/>
+        </scene>
+        <!--My Fingerprint AuthVC-->
+        <scene sceneID="XR5-IU-pjz">
+            <objects>
+                <viewController storyboardIdentifier="FingerprintAuth" id="h9Q-6M-MA3" customClass="MyFingerprintAuthVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Ok-l9-Zr8"/>
+                        <viewControllerLayoutGuide type="bottom" id="mYu-IY-tQn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u8A-mW-4nh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b6Y-hh-YAB">
+                                <rect key="frame" x="0.0" y="193" width="320" height="320"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Place your fingers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVc-ZC-3gM">
+                                <rect key="frame" x="63" y="130" width="195" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hand Guide.png" translatesAutoresizingMaskIntoConstraints="NO" id="d5q-jf-wwA">
+                                <rect key="frame" x="0.0" y="180" width="320" height="320"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="FingersDetectedOverlay" destination="d5q-jf-wwA" id="bZA-01-W82"/>
+                        <outlet property="previewView" destination="b6Y-hh-YAB" id="SSZ-Hc-xEd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NHT-mY-ybW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3118" y="-1502"/>
+        </scene>
         <!--Main Service View Controller-->
         <scene sceneID="Q4O-GI-Ky8">
             <objects>
@@ -718,10 +794,10 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://etis.morpho.com" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QC4-WG-AcX">
+                                        <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://etis.morpho.com" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QC4-WG-AcX">
                                             <rect key="frame" x="46" y="54" width="255" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                         </textField>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -861,6 +937,7 @@
         <image name="Backspace Icon.png" width="96" height="67"/>
         <image name="Blue_Morpho_Butterfly_by_pyrotaku.png" width="500" height="404"/>
         <image name="FaceOverlay.png" width="257" height="215"/>
+        <image name="Hand Guide.png" width="154" height="157"/>
         <image name="Line.png" width="10" height="321"/>
         <image name="Login Background.png" width="640" height="1107"/>
         <image name="Login Button.png" width="320" height="320"/>
@@ -868,6 +945,7 @@
         <image name="PinPad Pad.png" width="640" height="648"/>
         <image name="Scanning Line.png" width="640" height="30"/>
         <image name="Select Item.png" width="640" height="89"/>
+        <image name="iphone-touch-id-logo2.png" width="207" height="318"/>
         <image name="logo-fnac.png" width="370" height="365"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

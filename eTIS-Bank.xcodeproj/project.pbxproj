@@ -24,6 +24,13 @@
 		947FBA9B19A7D1F7004F0E9D /* blue-morpho2.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBA9819A7D1F6004F0E9D /* blue-morpho2.png */; };
 		947FBA9C19A7D1F7004F0E9D /* blue-morpho3.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBA9919A7D1F6004F0E9D /* blue-morpho3.png */; };
 		947FBA9F19A802F3004F0E9D /* settingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 947FBA9E19A802F3004F0E9D /* settingsVC.m */; };
+		947FBAA219A89B12004F0E9D /* MyTouchIDAuthVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 947FBAA119A89B12004F0E9D /* MyTouchIDAuthVC.m */; };
+		947FBAA519A89B3A004F0E9D /* MyFingerprintAuthVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 947FBAA419A89B3A004F0E9D /* MyFingerprintAuthVC.m */; };
+		947FBAA819A89D23004F0E9D /* iphone-touch-id-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBAA619A89D23004F0E9D /* iphone-touch-id-logo.png */; };
+		947FBAA919A89D23004F0E9D /* Touch ID logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBAA719A89D23004F0E9D /* Touch ID logo.png */; };
+		947FBAAB19A8B8A3004F0E9D /* iphone-touch-id-logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBAAA19A8B8A3004F0E9D /* iphone-touch-id-logo2.png */; };
+		947FBAAE19A8C9FA004F0E9D /* Hand Guide ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBAAC19A8C9FA004F0E9D /* Hand Guide ok.png */; };
+		947FBAAF19A8C9FA004F0E9D /* Hand Guide.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBAAD19A8C9FA004F0E9D /* Hand Guide.png */; };
 		94A5EC39199F8D1C00402CE3 /* MainServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A5EC38199F8D1C00402CE3 /* MainServiceViewController.m */; };
 		94A5EC3C199F9D4E00402CE3 /* Balance PreView.png in Resources */ = {isa = PBXBuildFile; fileRef = 94A5EC3A199F9D4E00402CE3 /* Balance PreView.png */; };
 		94A5EC3D199F9D4E00402CE3 /* WireTRansfer Preview 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 94A5EC3B199F9D4E00402CE3 /* WireTRansfer Preview 2.png */; };
@@ -95,6 +102,15 @@
 		947FBA9919A7D1F6004F0E9D /* blue-morpho3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-morpho3.png"; sourceTree = "<group>"; };
 		947FBA9D19A802F3004F0E9D /* settingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsVC.h; sourceTree = "<group>"; };
 		947FBA9E19A802F3004F0E9D /* settingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsVC.m; sourceTree = "<group>"; };
+		947FBAA019A89B12004F0E9D /* MyTouchIDAuthVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTouchIDAuthVC.h; sourceTree = "<group>"; };
+		947FBAA119A89B12004F0E9D /* MyTouchIDAuthVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTouchIDAuthVC.m; sourceTree = "<group>"; };
+		947FBAA319A89B3A004F0E9D /* MyFingerprintAuthVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFingerprintAuthVC.h; sourceTree = "<group>"; };
+		947FBAA419A89B3A004F0E9D /* MyFingerprintAuthVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFingerprintAuthVC.m; sourceTree = "<group>"; };
+		947FBAA619A89D23004F0E9D /* iphone-touch-id-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-touch-id-logo.png"; sourceTree = "<group>"; };
+		947FBAA719A89D23004F0E9D /* Touch ID logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Touch ID logo.png"; sourceTree = "<group>"; };
+		947FBAAA19A8B8A3004F0E9D /* iphone-touch-id-logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-touch-id-logo2.png"; sourceTree = "<group>"; };
+		947FBAAC19A8C9FA004F0E9D /* Hand Guide ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hand Guide ok.png"; sourceTree = "<group>"; };
+		947FBAAD19A8C9FA004F0E9D /* Hand Guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hand Guide.png"; sourceTree = "<group>"; };
 		94A5EC37199F8D1C00402CE3 /* MainServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainServiceViewController.h; sourceTree = "<group>"; };
 		94A5EC38199F8D1C00402CE3 /* MainServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainServiceViewController.m; sourceTree = "<group>"; };
 		94A5EC3A199F9D4E00402CE3 /* Balance PreView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Balance PreView.png"; sourceTree = "<group>"; };
@@ -212,6 +228,7 @@
 				94ACEF1E1997C793003B7244 /* ViewController.h */,
 				94ACEF1F1997C793003B7244 /* ViewController.m */,
 				94ACEF1B1997C793003B7244 /* Main.storyboard */,
+				947FBAAA19A8B8A3004F0E9D /* iphone-touch-id-logo2.png */,
 				944DA22E19A2366F009840BF /* AccountDetailsViewController.h */,
 				944DA22F19A2366F009840BF /* AccountDetailsViewController.m */,
 				94A5EC37199F8D1C00402CE3 /* MainServiceViewController.h */,
@@ -229,6 +246,10 @@
 		94ACEF101997C793003B7244 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				947FBAAC19A8C9FA004F0E9D /* Hand Guide ok.png */,
+				947FBAAD19A8C9FA004F0E9D /* Hand Guide.png */,
+				947FBAA619A89D23004F0E9D /* iphone-touch-id-logo.png */,
+				947FBAA719A89D23004F0E9D /* Touch ID logo.png */,
 				947FBA9719A7D1F6004F0E9D /* blue-morpho1.png */,
 				947FBA9819A7D1F6004F0E9D /* blue-morpho2.png */,
 				947FBA9919A7D1F6004F0E9D /* blue-morpho3.png */,
@@ -288,8 +309,12 @@
 		94F1F19419A67F370050D6D2 /* Authentication Views */ = {
 			isa = PBXGroup;
 			children = (
+				947FBAA019A89B12004F0E9D /* MyTouchIDAuthVC.h */,
+				947FBAA119A89B12004F0E9D /* MyTouchIDAuthVC.m */,
 				94C958C2199B8431007D6238 /* MyFaceAuthViewController.h */,
 				94C958C3199B8431007D6238 /* MyFaceAuthViewController.m */,
+				947FBAA319A89B3A004F0E9D /* MyFingerprintAuthVC.h */,
+				947FBAA419A89B3A004F0E9D /* MyFingerprintAuthVC.m */,
 				94C958BF199B83FB007D6238 /* MyPinAuthViewController.h */,
 				94C958C0199B83FB007D6238 /* MyPinAuthViewController.m */,
 				94C958BC199B8346007D6238 /* MyAuthSelectorViewController.h */,
@@ -394,11 +419,14 @@
 				947FBA9219A7C06E004F0E9D /* Blue_Morpho_Butterfly_by_pyrotaku.png in Resources */,
 				94A5EC3D199F9D4E00402CE3 /* WireTRansfer Preview 2.png in Resources */,
 				94FAB29B1997E3080087263F /* AccountOpeningPresentation1.png in Resources */,
+				947FBAA919A89D23004F0E9D /* Touch ID logo.png in Resources */,
 				94FAB29C1997E3080087263F /* AccountOpeningPresentation2.png in Resources */,
+				947FBAAB19A8B8A3004F0E9D /* iphone-touch-id-logo2.png in Resources */,
 				94A5EC3F199FC7B200402CE3 /* Select Item.png in Resources */,
 				944DA22D19A171CB009840BF /* Card Preview.png in Resources */,
 				94FAB28F1997CA740087263F /* Login Button.png in Resources */,
 				944FF19B199EA8A200EA07BA /* Scanning Line.png in Resources */,
+				947FBAAF19A8C9FA004F0E9D /* Hand Guide.png in Resources */,
 				94FAB28D1997CA740087263F /* Background + Rectangle 7 + Your Bank.png in Resources */,
 				94ACEF221997C793003B7244 /* Images.xcassets in Resources */,
 				944DA23219A24C11009840BF /* NavigationBar.png in Resources */,
@@ -407,6 +435,7 @@
 				947FBA9319A7C06E004F0E9D /* bank-of-america-logo.png in Resources */,
 				947FBA8C19A7B28E004F0E9D /* logo-fnac.png in Resources */,
 				94C958B7199AD8BE007D6238 /* Backspace Icon.png in Resources */,
+				947FBAAE19A8C9FA004F0E9D /* Hand Guide ok.png in Resources */,
 				94FAB2881997C8200087263F /* eTIS-Bank App Icon.png in Resources */,
 				9430F4971999832D0058B043 /* PinPad Pad.png in Resources */,
 				94C958B9199AD8BE007D6238 /* Pin Pad Icon.png in Resources */,
@@ -423,6 +452,7 @@
 				94C958C8199BB7E0007D6238 /* FaceOverlayDetected.png in Resources */,
 				94FAB29E1997E3080087263F /* AccountOpeningPresentation4.png in Resources */,
 				94C958B8199AD8BE007D6238 /* Login Background.png in Resources */,
+				947FBAA819A89D23004F0E9D /* iphone-touch-id-logo.png in Resources */,
 				947FBA9B19A7D1F7004F0E9D /* blue-morpho2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,11 +519,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				94FAB2931997DBFB0087263F /* OpenAccountPresentationViewController.m in Sources */,
+				947FBAA519A89B3A004F0E9D /* MyFingerprintAuthVC.m in Sources */,
 				94A5EC39199F8D1C00402CE3 /* MainServiceViewController.m in Sources */,
 				944DA23019A2366F009840BF /* AccountDetailsViewController.m in Sources */,
 				94ACEF201997C793003B7244 /* ViewController.m in Sources */,
 				94ACEF1A1997C793003B7244 /* AppDelegate.m in Sources */,
 				942EB40919A788FC00CE9759 /* customSegPop.m in Sources */,
+				947FBAA219A89B12004F0E9D /* MyTouchIDAuthVC.m in Sources */,
 				94C958C4199B8431007D6238 /* MyFaceAuthViewController.m in Sources */,
 				94C958C1199B83FB007D6238 /* MyPinAuthViewController.m in Sources */,
 				94C958BE199B8346007D6238 /* MyAuthSelectorViewController.m in Sources */,

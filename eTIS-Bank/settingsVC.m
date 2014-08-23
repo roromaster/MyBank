@@ -27,14 +27,24 @@ NSArray *section_list;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-     section_list= @[@"Active Auth", @"Server Settings", @"Reset Settings"];
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    [self.view addGestureRecognizer:tap];
+    
+    section_list= @[@"Active Auth", @"Server Settings", @"Reset Settings"];
     
 
     self.navigationController.navigationBar.topItem.title = @"eTIS-Bank Settings";
     self.navigationController.navigationBar.titleTextAttributes = @{NSBackgroundColorAttributeName: [UIColor whiteColor]};
 
-
 }
+
+
+- (void)handleTap:(UITapGestureRecognizer *)recognizer
+{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -212,8 +222,10 @@ NSArray *section_list;
                     UILabel *label = (UILabel *)[cell.contentView viewWithTag:1];
                     UITextField *url = (UITextField *)[cell.contentView viewWithTag:2];
                     label.text = @"Server URL";
-                    [url addTarget:self action:@selector(updateURL:) forControlEvents:UIControlEventValueChanged];
+                
                     url.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"SERVICE_URL"];
+                    [url addTarget:self action:@selector(updateURL:) forControlEvents:UIControlEventEditingDidEnd|UIControlEventEditingDidEndOnExit];
+                    
                     break;
                 }
             }

@@ -16,8 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    authListVC = [[NSMutableArray alloc]init];
 
     // Do any additional setup after loading the view.
+    
+    faceEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:
+                    @"FACE"];
+    
+    pinEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:
+                   @"PIN"];
+    
+    touchIDEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:
+                       @"TOUCHID"];
+    fingersEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:
+                      @"FINGERPRINT"];
     
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Login Background.png"]];
     
@@ -35,6 +49,29 @@
     FaceViewController =[storyboard
                          instantiateViewControllerWithIdentifier:@"FaceAuth"];
     
+    touchIDViewController = [storyboard instantiateViewControllerWithIdentifier:@"touchIDAuth"];
+    
+    fingersViewController = [storyboard instantiateViewControllerWithIdentifier:@"FingerprintAuth"];
+    
+    if (pinEnabled)
+    {
+        [authListVC addObject:PinViewController];
+    }
+    if (faceEnabled)
+    {
+        [authListVC addObject:FaceViewController];
+         [FaceViewController view];
+    }
+    if (touchIDEnabled)
+    {
+        [authListVC addObject:touchIDViewController];
+    }
+    if (fingersEnabled)
+    {
+        [authListVC addObject:fingersViewController];
+        [fingersViewController view ];
+    }
+    
     
     [self.view addSubview:background];
 
@@ -44,16 +81,15 @@
     
     self.dataSource = self;
 
-    [PinViewController view];
     
-    [FaceViewController view];
+   
 
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    NSArray *viewControllers = [[NSArray alloc] initWithObjects:PinViewController, nil];
+    NSArray *viewControllers = [[NSArray alloc] initWithObjects:authListVC[0], nil];
     
 
     [self setViewControllers:viewControllers
@@ -96,21 +132,21 @@
 {
     // Return the data view controller for the given index.
     
-    if (index == 0)
-        return PinViewController;
-    else if (index == 1)
-        return FaceViewController;
-    else
+    if (index >= [authListVC count])
         return nil;
+    else
+        return authListVC[index];
 }
 
 - (NSUInteger)indexOfViewController:(UIViewController *)viewController
 {
-    if (viewController == PinViewController)
-        return 0;
-    else if (viewController == FaceViewController)
-        return 1;
-    else return 0;
+    int i=0;
+    for (UIViewController *controler in authListVC) {
+        if (controler == viewController)
+            return i;
+        i++;
+    }
+    return 0;
 }
 
 - (UIViewController *)pageViewController:

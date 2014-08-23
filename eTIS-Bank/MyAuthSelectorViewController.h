@@ -9,12 +9,25 @@
 #import <UIKit/UIKit.h>
 #import "MyFaceAuthViewController.h"
 #import "MyPinAuthViewController.h"
+#import "MyTouchIDAuthVC.h"
+#import "MyFingerprintAuthVC.h"
+
+
 
 @interface MyAuthSelectorViewController : UIPageViewController<UIPageViewControllerDataSource>
 {
 
+    BOOL pinEnabled;
+    BOOL faceEnabled;
+    BOOL touchIDEnabled;
+    BOOL fingersEnabled;
     MyPinAuthViewController *PinViewController;
     MyFaceAuthViewController *FaceViewController;
+    MyTouchIDAuthVC *touchIDViewController;
+    MyFingerprintAuthVC *fingersViewController;
+    
+    NSMutableArray *authListVC;
 
 }
 @end
+

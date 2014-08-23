@@ -42,7 +42,7 @@
 {
 
     [super viewDidAppear:animated];
-
+   
     NSLog(@"ViewDidAppear");
     self->ScanningLine.alpha = 0;
 
@@ -51,6 +51,7 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+
 }
 
 
@@ -262,13 +263,14 @@
     // we want BGRA, both CoreGraphics and OpenGL work well with 'BGRA'
     NSDictionary *rgbOutputSettings = [NSDictionary dictionaryWithObject:
                                        [NSNumber numberWithInt:kCMPixelFormat_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey];
+    
     [videoDataOutput setVideoSettings:rgbOutputSettings];
     [videoDataOutput setAlwaysDiscardsLateVideoFrames:YES]; // discard if the data output queue is blocked (as we process the still image)
     
     // create a serial dispatch queue used for the sample buffer delegate as well as when a still image is captured
     // a serial dispatch queue must be used to guarantee that video frames will be delivered in order
     // see the header doc for setSampleBufferDelegate:queue: for more information
-    videoDataOutputQueue = dispatch_queue_create("VideoDataOutputQueue", DISPATCH_QUEUE_SERIAL);
+    videoDataOutputQueue = dispatch_queue_create("VideoDataOutputQueueFace", DISPATCH_QUEUE_SERIAL);
     [videoDataOutput setSampleBufferDelegate:self queue:videoDataOutputQueue];
     
     if ( [session canAddOutput:videoDataOutput] )
