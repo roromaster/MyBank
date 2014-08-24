@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Crashlytics/Crashlytics.h>
+#import <BugSense-iOS/BugSenseController.h>
 
 @implementation AppDelegate
 
@@ -18,6 +19,7 @@
 
     [Crashlytics startWithAPIKey:@"93c2ce41cb7d31a41ce5e12b746468bfed77acfd"];
     
+    [BugSenseController sharedControllerWithBugSenseAPIKey:@"d83aba95"];
    
     return YES;
 }

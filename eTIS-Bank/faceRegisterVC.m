@@ -9,14 +9,57 @@
 #import "faceRegisterVC.h"
 
 @interface faceRegisterVC ()
+{
 
+
+}
 @end
 
 @implementation faceRegisterVC
 
+NSMutableArray *progressionImages;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+      NSArray *images_name= @[@"face-10%.png",
+                              @"face-20%.png",
+                              @"face-30%.png",
+                              @"face-40%.png",
+                              @"face-50%.png",
+                              @"face-60%.png",
+                              @"face-70%.png",
+                              @"face-80%.png",
+                              @"face-90%.png",
+                              @"face-100%.png"
+                              ];
+    
+    progressionImages = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < images_name.count; i++) {
+        [progressionImages addObject:[UIImage imageNamed:[images_name objectAtIndex:i]]];
+    }
+
+    _registerProgressionImage.animationImages = progressionImages;
+    _registerProgressionImage.animationDuration = 10.0;
+
+    
+    [_registerProgressionImage startAnimating];
+
+    
+    UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Login Background.png"]];
+    
+    [background sizeToFit];
+    [background setFrame:self.view.frame];
+    [background setBounds:self.view.bounds];
+    
+    [self.view addSubview:background];
+    
+    background.layer.zPosition = -1;
+    
+
+    
 }
 
 - (void)didReceiveMemoryWarning {

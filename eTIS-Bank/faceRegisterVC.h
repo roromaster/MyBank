@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface faceRegisterVC : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *registerProgressionImage;
+@property (weak, nonatomic) IBOutlet UIImageView *faceOverlay;
+@property (weak, nonatomic) IBOutlet UIView *previewView;
+@property (weak, nonatomic) IBOutlet UIImageView *scanningBar;
 
 @end

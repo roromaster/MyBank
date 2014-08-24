@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9403A0C219A961F200920084 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9403A0C119A961F200920084 /* AudioToolbox.framework */; };
+		9403A0C619A9622800920084 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9403A0C519A9622800920084 /* CoreLocation.framework */; };
+		9403A0C819A9623900920084 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9403A0C719A9623900920084 /* libz.dylib */; };
+		9403A0CA19A9626800920084 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9403A0C919A9626800920084 /* MobileCoreServices.framework */; };
+		9403A0CC19A9627300920084 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9403A0CB19A9627300920084 /* QuartzCore.framework */; };
+		9403A0CE19A9628000920084 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9403A0CD19A9628000920084 /* Security.framework */; };
+		9403A0D019A9628B00920084 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9403A0CF19A9628B00920084 /* StoreKit.framework */; };
+		9403A0D219A9629600920084 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9403A0D119A9629600920084 /* SystemConfiguration.framework */; };
+		9403A0DE19AA69DD00920084 /* BugSense-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9403A0DD19AA69DD00920084 /* BugSense-iOS.framework */; };
 		94051CC819994D020070A485 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94051CC719994D020070A485 /* Crashlytics.framework */; };
 		942EB40919A788FC00CE9759 /* customSegPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 942EB40819A788FC00CE9759 /* customSegPop.m */; };
 		9430F4971999832D0058B043 /* PinPad Pad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9430F4961999832D0058B043 /* PinPad Pad.png */; };
@@ -33,6 +42,16 @@
 		947FBAAF19A8C9FA004F0E9D /* Hand Guide.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBAAD19A8C9FA004F0E9D /* Hand Guide.png */; };
 		947FBAB219A91BEC004F0E9D /* faceRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 947FBAB119A91BEC004F0E9D /* faceRegisterVC.m */; };
 		947FBAB619A91C1D004F0E9D /* pinRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 947FBAB519A91C1D004F0E9D /* pinRegisterVC.m */; };
+		947FBAC119A923A0004F0E9D /* face-10%.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBAB719A923A0004F0E9D /* face-10%.png */; };
+		947FBAC219A923A0004F0E9D /* face-20%.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBAB819A923A0004F0E9D /* face-20%.png */; };
+		947FBAC319A923A0004F0E9D /* face-30%.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBAB919A923A0004F0E9D /* face-30%.png */; };
+		947FBAC419A923A0004F0E9D /* face-40%.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBABA19A923A0004F0E9D /* face-40%.png */; };
+		947FBAC519A923A0004F0E9D /* face-50%.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBABB19A923A0004F0E9D /* face-50%.png */; };
+		947FBAC619A923A0004F0E9D /* face-60%.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBABC19A923A0004F0E9D /* face-60%.png */; };
+		947FBAC719A923A0004F0E9D /* face-70%.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBABD19A923A0004F0E9D /* face-70%.png */; };
+		947FBAC819A923A0004F0E9D /* face-80%.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBABE19A923A0004F0E9D /* face-80%.png */; };
+		947FBAC919A923A0004F0E9D /* face-90%.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBABF19A923A0004F0E9D /* face-90%.png */; };
+		947FBACA19A923A0004F0E9D /* face-100%.png in Resources */ = {isa = PBXBuildFile; fileRef = 947FBAC019A923A0004F0E9D /* face-100%.png */; };
 		94A5EC39199F8D1C00402CE3 /* MainServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A5EC38199F8D1C00402CE3 /* MainServiceViewController.m */; };
 		94A5EC3C199F9D4E00402CE3 /* Balance PreView.png in Resources */ = {isa = PBXBuildFile; fileRef = 94A5EC3A199F9D4E00402CE3 /* Balance PreView.png */; };
 		94A5EC3D199F9D4E00402CE3 /* WireTRansfer Preview 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 94A5EC3B199F9D4E00402CE3 /* WireTRansfer Preview 2.png */; };
@@ -84,6 +103,16 @@
 
 /* Begin PBXFileReference section */
 		3D8BAFE6402F47C091490945 /* Pods-eTIS-Bank.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eTIS-Bank.xcconfig"; path = "Pods/Pods-eTIS-Bank.xcconfig"; sourceTree = "<group>"; };
+		9403A0C119A961F200920084 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9403A0C319A9621000920084 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9403A0C519A9622800920084 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9403A0C719A9623900920084 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		9403A0C919A9626800920084 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9403A0CB19A9627300920084 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9403A0CD19A9628000920084 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9403A0CF19A9628B00920084 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		9403A0D119A9629600920084 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9403A0DD19AA69DD00920084 /* BugSense-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "BugSense-iOS.framework"; path = "../BugSense 3.6/BugSense-iOS.framework"; sourceTree = "<group>"; };
 		94051CC719994D020070A485 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		942EB40719A788FC00CE9759 /* customSegPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customSegPop.h; sourceTree = "<group>"; };
 		942EB40819A788FC00CE9759 /* customSegPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customSegPop.m; sourceTree = "<group>"; };
@@ -117,6 +146,16 @@
 		947FBAB119A91BEC004F0E9D /* faceRegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = faceRegisterVC.m; sourceTree = "<group>"; };
 		947FBAB419A91C1D004F0E9D /* pinRegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinRegisterVC.h; sourceTree = "<group>"; };
 		947FBAB519A91C1D004F0E9D /* pinRegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pinRegisterVC.m; sourceTree = "<group>"; };
+		947FBAB719A923A0004F0E9D /* face-10%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face-10%.png"; sourceTree = "<group>"; };
+		947FBAB819A923A0004F0E9D /* face-20%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face-20%.png"; sourceTree = "<group>"; };
+		947FBAB919A923A0004F0E9D /* face-30%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face-30%.png"; sourceTree = "<group>"; };
+		947FBABA19A923A0004F0E9D /* face-40%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face-40%.png"; sourceTree = "<group>"; };
+		947FBABB19A923A0004F0E9D /* face-50%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face-50%.png"; sourceTree = "<group>"; };
+		947FBABC19A923A0004F0E9D /* face-60%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face-60%.png"; sourceTree = "<group>"; };
+		947FBABD19A923A0004F0E9D /* face-70%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face-70%.png"; sourceTree = "<group>"; };
+		947FBABE19A923A0004F0E9D /* face-80%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face-80%.png"; sourceTree = "<group>"; };
+		947FBABF19A923A0004F0E9D /* face-90%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face-90%.png"; sourceTree = "<group>"; };
+		947FBAC019A923A0004F0E9D /* face-100%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face-100%.png"; sourceTree = "<group>"; };
 		94A5EC37199F8D1C00402CE3 /* MainServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainServiceViewController.h; sourceTree = "<group>"; };
 		94A5EC38199F8D1C00402CE3 /* MainServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainServiceViewController.m; sourceTree = "<group>"; };
 		94A5EC3A199F9D4E00402CE3 /* Balance PreView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Balance PreView.png"; sourceTree = "<group>"; };
@@ -172,8 +211,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94051CC819994D020070A485 /* Crashlytics.framework in Frameworks */,
+				9403A0DE19AA69DD00920084 /* BugSense-iOS.framework in Frameworks */,
+				9403A0D219A9629600920084 /* SystemConfiguration.framework in Frameworks */,
+				9403A0D019A9628B00920084 /* StoreKit.framework in Frameworks */,
+				9403A0CE19A9628000920084 /* Security.framework in Frameworks */,
+				9403A0CC19A9627300920084 /* QuartzCore.framework in Frameworks */,
+				9403A0CA19A9626800920084 /* MobileCoreServices.framework in Frameworks */,
+				9403A0C819A9623900920084 /* libz.dylib in Frameworks */,
+				9403A0C619A9622800920084 /* CoreLocation.framework in Frameworks */,
 				94ACEF0C1997C793003B7244 /* CoreGraphics.framework in Frameworks */,
+				9403A0C219A961F200920084 /* AudioToolbox.framework in Frameworks */,
+				94051CC819994D020070A485 /* Crashlytics.framework in Frameworks */,
 				94ACEF0E1997C793003B7244 /* UIKit.framework in Frameworks */,
 				94ACEF0A1997C793003B7244 /* Foundation.framework in Frameworks */,
 				DE034CB616A7490A9DEF8BBE /* libPods-eTIS-Bank.a in Frameworks */,
@@ -226,6 +274,16 @@
 		94ACEF081997C793003B7244 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9403A0DD19AA69DD00920084 /* BugSense-iOS.framework */,
+				9403A0D119A9629600920084 /* SystemConfiguration.framework */,
+				9403A0CF19A9628B00920084 /* StoreKit.framework */,
+				9403A0CD19A9628000920084 /* Security.framework */,
+				9403A0CB19A9627300920084 /* QuartzCore.framework */,
+				9403A0C919A9626800920084 /* MobileCoreServices.framework */,
+				9403A0C719A9623900920084 /* libz.dylib */,
+				9403A0C519A9622800920084 /* CoreLocation.framework */,
+				9403A0C319A9621000920084 /* CFNetwork.framework */,
+				9403A0C119A961F200920084 /* AudioToolbox.framework */,
 				94051CC719994D020070A485 /* Crashlytics.framework */,
 				94ACEF091997C793003B7244 /* Foundation.framework */,
 				94ACEF0B1997C793003B7244 /* CoreGraphics.framework */,
@@ -264,6 +322,16 @@
 		94ACEF101997C793003B7244 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				947FBAB719A923A0004F0E9D /* face-10%.png */,
+				947FBAB819A923A0004F0E9D /* face-20%.png */,
+				947FBAB919A923A0004F0E9D /* face-30%.png */,
+				947FBABA19A923A0004F0E9D /* face-40%.png */,
+				947FBABB19A923A0004F0E9D /* face-50%.png */,
+				947FBABC19A923A0004F0E9D /* face-60%.png */,
+				947FBABD19A923A0004F0E9D /* face-70%.png */,
+				947FBABE19A923A0004F0E9D /* face-80%.png */,
+				947FBABF19A923A0004F0E9D /* face-90%.png */,
+				947FBAC019A923A0004F0E9D /* face-100%.png */,
 				947FBAAC19A8C9FA004F0E9D /* Hand Guide ok.png */,
 				947FBAAD19A8C9FA004F0E9D /* Hand Guide.png */,
 				947FBAA619A89D23004F0E9D /* iphone-touch-id-logo.png */,
@@ -434,9 +502,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947FBAC419A923A0004F0E9D /* face-40%.png in Resources */,
+				947FBAC919A923A0004F0E9D /* face-90%.png in Resources */,
 				947FBA9219A7C06E004F0E9D /* Blue_Morpho_Butterfly_by_pyrotaku.png in Resources */,
 				94A5EC3D199F9D4E00402CE3 /* WireTRansfer Preview 2.png in Resources */,
 				94FAB29B1997E3080087263F /* AccountOpeningPresentation1.png in Resources */,
+				947FBAC319A923A0004F0E9D /* face-30%.png in Resources */,
 				947FBAA919A89D23004F0E9D /* Touch ID logo.png in Resources */,
 				94FAB29C1997E3080087263F /* AccountOpeningPresentation2.png in Resources */,
 				947FBAAB19A8B8A3004F0E9D /* iphone-touch-id-logo2.png in Resources */,
@@ -453,21 +524,28 @@
 				947FBA9319A7C06E004F0E9D /* bank-of-america-logo.png in Resources */,
 				947FBA8C19A7B28E004F0E9D /* logo-fnac.png in Resources */,
 				94C958B7199AD8BE007D6238 /* Backspace Icon.png in Resources */,
+				947FBAC719A923A0004F0E9D /* face-70%.png in Resources */,
 				947FBAAE19A8C9FA004F0E9D /* Hand Guide ok.png in Resources */,
 				94FAB2881997C8200087263F /* eTIS-Bank App Icon.png in Resources */,
 				9430F4971999832D0058B043 /* PinPad Pad.png in Resources */,
 				94C958B9199AD8BE007D6238 /* Pin Pad Icon.png in Resources */,
 				947FBA9619A7C06E004F0E9D /* morpho-logo.jpeg in Resources */,
+				947FBAC619A923A0004F0E9D /* face-60%.png in Resources */,
 				947FBA9C19A7D1F7004F0E9D /* blue-morpho3.png in Resources */,
 				947FBA9A19A7D1F6004F0E9D /* blue-morpho1.png in Resources */,
+				947FBAC219A923A0004F0E9D /* face-20%.png in Resources */,
 				94C958C6199BB4DD007D6238 /* FaceOverlay.png in Resources */,
 				94FAB28E1997CA740087263F /* Line.png in Resources */,
+				947FBACA19A923A0004F0E9D /* face-100%.png in Resources */,
 				94FAB2901997CA740087263F /* Open Account Button.png in Resources */,
 				94ACEF141997C793003B7244 /* InfoPlist.strings in Resources */,
+				947FBAC119A923A0004F0E9D /* face-10%.png in Resources */,
+				947FBAC819A923A0004F0E9D /* face-80%.png in Resources */,
 				94ACEF1D1997C793003B7244 /* Main.storyboard in Resources */,
 				94FAB29D1997E3080087263F /* AccountOpeningPresentation3.png in Resources */,
 				947FBA9519A7C06E004F0E9D /* Logo_Edf.png in Resources */,
 				94C958C8199BB7E0007D6238 /* FaceOverlayDetected.png in Resources */,
+				947FBAC519A923A0004F0E9D /* face-50%.png in Resources */,
 				94FAB29E1997E3080087263F /* AccountOpeningPresentation4.png in Resources */,
 				94C958B8199AD8BE007D6238 /* Login Background.png in Resources */,
 				947FBAA819A89D23004F0E9D /* iphone-touch-id-logo.png in Resources */,
@@ -682,6 +760,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/Rodolphe/iOS,
+					"Dev/parse-library-1.2.21",
+					"$(PROJECT_DIR)/parse-library-1.2.21",
+					/Users/Rodolphe/iOS,
+					Dev/BugSense,
+					3.6,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "eTIS-Bank/eTIS-Bank-Prefix.pch";
@@ -704,6 +788,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/Rodolphe/iOS,
+					"Dev/parse-library-1.2.21",
+					"$(PROJECT_DIR)/parse-library-1.2.21",
+					/Users/Rodolphe/iOS,
+					Dev/BugSense,
+					3.6,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "eTIS-Bank/eTIS-Bank-Prefix.pch";
