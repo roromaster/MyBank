@@ -16,6 +16,7 @@
 		9403A0D019A9628B00920084 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9403A0CF19A9628B00920084 /* StoreKit.framework */; };
 		9403A0D219A9629600920084 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9403A0D119A9629600920084 /* SystemConfiguration.framework */; };
 		9403A0DE19AA69DD00920084 /* BugSense-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9403A0DD19AA69DD00920084 /* BugSense-iOS.framework */; };
+		9403A0E119ABCF8500920084 /* RegisterTutorialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9403A0E019ABCF8500920084 /* RegisterTutorialVC.m */; };
 		94051CC819994D020070A485 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94051CC719994D020070A485 /* Crashlytics.framework */; };
 		942EB40919A788FC00CE9759 /* customSegPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 942EB40819A788FC00CE9759 /* customSegPop.m */; };
 		9430F4971999832D0058B043 /* PinPad Pad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9430F4961999832D0058B043 /* PinPad Pad.png */; };
@@ -113,6 +114,8 @@
 		9403A0CF19A9628B00920084 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9403A0D119A9629600920084 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9403A0DD19AA69DD00920084 /* BugSense-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "BugSense-iOS.framework"; path = "../BugSense 3.6/BugSense-iOS.framework"; sourceTree = "<group>"; };
+		9403A0DF19ABCF8500920084 /* RegisterTutorialVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTutorialVC.h; sourceTree = "<group>"; };
+		9403A0E019ABCF8500920084 /* RegisterTutorialVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTutorialVC.m; sourceTree = "<group>"; };
 		94051CC719994D020070A485 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		942EB40719A788FC00CE9759 /* customSegPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customSegPop.h; sourceTree = "<group>"; };
 		942EB40819A788FC00CE9759 /* customSegPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customSegPop.m; sourceTree = "<group>"; };
@@ -247,6 +250,8 @@
 				947FBAB119A91BEC004F0E9D /* faceRegisterVC.m */,
 				947FBAB419A91C1D004F0E9D /* pinRegisterVC.h */,
 				947FBAB519A91C1D004F0E9D /* pinRegisterVC.m */,
+				9403A0DF19ABCF8500920084 /* RegisterTutorialVC.h */,
+				9403A0E019ABCF8500920084 /* RegisterTutorialVC.m */,
 			);
 			name = Register;
 			sourceTree = "<group>";
@@ -614,6 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9403A0E119ABCF8500920084 /* RegisterTutorialVC.m in Sources */,
 				94FAB2931997DBFB0087263F /* OpenAccountPresentationViewController.m in Sources */,
 				947FBAA519A89B3A004F0E9D /* MyFingerprintAuthVC.m in Sources */,
 				94A5EC39199F8D1C00402CE3 /* MainServiceViewController.m in Sources */,
