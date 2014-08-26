@@ -33,6 +33,21 @@
     fingersEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:
                       @"FINGERPRINT"];
     
+    
+    if (!(faceEnabled|pinEnabled|touchIDEnabled|fingersEnabled))
+    {
+        //We set the default configuration in place
+        pinEnabled =  true;
+        faceEnabled = true;
+        touchIDEnabled = true;
+        
+        [[NSUserDefaults standardUserDefaults] setBool:pinEnabled forKey:@"PIN"];
+        [[NSUserDefaults standardUserDefaults] setBool:faceEnabled forKey:@"FACE"];
+        [[NSUserDefaults standardUserDefaults] setBool:touchIDEnabled forKey:@"TOUCHID"];
+        
+        
+    }
+    
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Login Background.png"]];
     
     [background sizeToFit];
