@@ -7,6 +7,7 @@
 //
 
 #import "settingsVC.h"
+#import "RegisterTutorialVC.h"
 
 @interface settingsVC ()
 
@@ -135,6 +136,19 @@ NSArray *section_list;
     
 }
 
+- (void) viewTutorialFaceRegister
+{
+    UIStoryboard *storyboard =
+    [UIStoryboard storyboardWithName:@"Main"
+                              bundle:[NSBundle mainBundle]];
+    
+    RegisterTutorialVC *TutorialViewController =[storyboard
+                         instantiateViewControllerWithIdentifier:@"RegisterFaceTutorial"];
+    
+    [self.navigationController pushViewController:TutorialViewController animated:true];
+}
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -231,6 +245,29 @@ NSArray *section_list;
             }
             
         }
+            
+        case 2:
+        {
+            
+            switch (indexPath.row) {
+                case 0:
+                {
+                    
+                    cell = [tableView dequeueReusableCellWithIdentifier:@"Reset" forIndexPath:indexPath];
+                    UILabel *label = (UILabel *)[cell.contentView viewWithTag:2];
+                    UIButton *register_tutorial_button = (UIButton *)[cell.contentView viewWithTag:1];
+                    
+                    label.text = @"Face Tutorial";
+                    [register_tutorial_button addTarget:self action:@selector(viewTutorialFaceRegister) forControlEvents:UIControlEventTouchUpInside];
+                    
+                    [register_tutorial_button setTitle:@"View" forState:UIControlStateNormal];
+                    break;
+                }
+                    
+            }
+            
+        }
+
             
         default:
             break;

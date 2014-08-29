@@ -308,7 +308,6 @@
 				94ACEF1E1997C793003B7244 /* ViewController.h */,
 				94ACEF1F1997C793003B7244 /* ViewController.m */,
 				94ACEF1B1997C793003B7244 /* Main.storyboard */,
-				947FBAAA19A8B8A3004F0E9D /* iphone-touch-id-logo2.png */,
 				944DA22E19A2366F009840BF /* AccountDetailsViewController.h */,
 				944DA22F19A2366F009840BF /* AccountDetailsViewController.m */,
 				94A5EC37199F8D1C00402CE3 /* MainServiceViewController.h */,
@@ -327,6 +326,7 @@
 		94ACEF101997C793003B7244 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				947FBAAA19A8B8A3004F0E9D /* iphone-touch-id-logo2.png */,
 				947FBAB719A923A0004F0E9D /* face-10%.png */,
 				947FBAB819A923A0004F0E9D /* face-20%.png */,
 				947FBAB919A923A0004F0E9D /* face-30%.png */,
