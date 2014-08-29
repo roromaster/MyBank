@@ -243,6 +243,7 @@ NSArray *section_list;
                     break;
                 }
             }
+            break;
             
         }
             

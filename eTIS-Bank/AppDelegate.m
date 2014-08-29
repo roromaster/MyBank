@@ -19,7 +19,7 @@
 
     [Crashlytics startWithAPIKey:@"93c2ce41cb7d31a41ce5e12b746468bfed77acfd"];
     
-    [BugSenseController sharedControllerWithBugSenseAPIKey:@"d83aba95"];
+ //   [BugSenseController sharedControllerWithBugSenseAPIKey:@"d83aba95"];
    
     return YES;
 }
